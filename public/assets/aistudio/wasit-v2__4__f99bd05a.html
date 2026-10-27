@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef4ef">
+  <meta name="description" content="وسيط: استوديو برومبتات عربي وإنجليزي يطلب منتجات رقمية نهائية، مع تذييل توثيق اختياري مستقل للمعلمين والمعلمات.">
+  <title>وسيط ٢.٣ | تحسين الثبات واستعادة الإعدادات</title>
+  <!-- نسخة مستقلة تعمل دون خادم أو مكتبات خارجية، مناسبة لـ GitHub Pages -->
+  <style>
+:root{font-family:Tahoma,"Segoe UI",Arial,sans-serif;color-scheme:light;--page:#f5f7f3;--surface:#fff;--surface2:#f9faf7;--line:#e1e9e2;--text:#19342d;--muted:#6a7f76;--primary:#13765d;--primary-deep:#0e5543;--primary-soft:#e8f5ee;--gold:#c99947;--shadow:0 12px 35px rgba(22,70,50,.065);--ui-dir:rtl;--cards-dir:rtl;--ui-text-align:start;--card-padding:17px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);color:var(--text);font-size:14px;line-height:1.6}
+body.dark{--page:#101b1a;--surface:#172522;--surface2:#1d302b;--line:#304840;--text:#e8f0ea;--muted:#a0b6ac;--primary:#6bcb9f;--primary-deep:#4ba77f;--primary-soft:#25473a;--gold:#e6bc76;--shadow:0 12px 34px rgba(0,0,0,.14);color-scheme:dark}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;border:0;transition:background .16s,transform .16s,border-color .16s}
+button:active{transform:scale(.98)}
+input,textarea,select{color:var(--text)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #70b899;outline-offset:2px}
+button:disabled{opacity:.45;cursor:not-allowed}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px max(30px,calc((100vw - 1380px)/2));background:var(--surface);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;direction:rtl}
+.brand-symbol{width:42px;height:42px;display:grid;place-items:center;position:relative;background:var(--primary);border-radius:14px;color:white;font-weight:900;font-size:27px;box-shadow:0 8px 17px rgba(22,106,79,.2)}
+.brand-symbol span{font-size:9px;position:absolute;top:1px;right:5px;color:#ffdf9c}
+.brand-text{display:flex;flex-direction:column;line-height:1.18}.brand-text strong{font-size:24px;letter-spacing:-1px}.brand-text small{font:600 9px/2 Arial,sans-serif;letter-spacing:1.3px;color:var(--muted)}
+.top-actions{display:flex;align-items:center;gap:10px}.privacy-pill{color:var(--muted);font-size:12px;margin-inline-end:15px}.icon-btn,.lang-btn{display:grid;place-items:center;background:var(--surface2);border:1px solid var(--line);border-radius:12px;height:39px;color:var(--text)}.icon-btn{width:40px;font-size:22px}.lang-btn{min-width:48px;font-size:12px;font-weight:800;letter-spacing:.5px}
+.new-request-top{background:var(--primary);color:#fff;border:1px solid var(--primary);padding:8px 15px;border-radius:12px;font-size:12px;font-weight:800;box-shadow:0 8px 18px #166f5925}.new-request-top:hover{background:var(--primary-deep)}.new-request-top span:first-child{font-size:17px;line-height:0;vertical-align:middle;margin-inline-end:2px}
+.shell{max-width:1380px;margin:0 auto;padding:34px 30px 48px}
+.hero{min-height:230px;overflow:hidden;display:flex;align-items:center;justify-content:space-between;position:relative;background:linear-gradient(115deg,#e8f4ed 0%,#f5f8f3 55%,#f3eede 100%);border:1px solid #e0eadf;border-radius:24px;padding:33px 55px}
+body.dark .hero{background:linear-gradient(115deg,#193d30,#21332e 60%,#473d2b);border-color:var(--line)}
+.hero-copy{z-index:1;max-width:700px}.eyebrow{display:flex;gap:8px;align-items:center;color:var(--primary);font-weight:800;font-size:11px;letter-spacing:.4px}.green-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--primary)}
+.hero h1{font-size:clamp(28px,3.4vw,46px);line-height:1.33;letter-spacing:-1.5px;margin:12px 0 8px}.hero h1 em{font-style:normal;color:var(--primary)}.hero p{color:#557268;font-size:15px;line-height:1.85;max-width:600px;margin:0}.dark .hero p{color:var(--muted)}
+.hero-chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:22px;direction:ltr;justify-content:flex-end}.hero-chips span{border:1px solid #d2e8d9;border-radius:25px;background:#ffffff99;color:#3b7c63;font:600 10px Arial;padding:6px 12px;letter-spacing:.25px;backdrop-filter:blur(10px)}.dark .hero-chips span{border-color:var(--line);background:#142f2899;color:var(--primary)}
+.hero-decoration{width:250px;height:205px;flex-shrink:0;position:relative;margin-inline-end:40px}.orbit{position:absolute;border:1px dashed rgba(21,110,83,.23);border-radius:50%;inset:13px 25px}.orbit-b{inset:32px 44px;transform:rotate(-28deg);border-style:solid;border-color:rgba(22,101,76,.1)}.orbit-center{position:absolute;top:70px;left:105px;width:70px;height:70px;border-radius:21px;background:var(--primary);color:#fff;box-shadow:0 15px 25px #17634b24;display:grid;place-items:center;font:700 49px Arial}.float-token{position:absolute;z-index:1;background:#fff;border:1px solid #dbe9dc;border-radius:10px;color:#327058;padding:7px 11px;box-shadow:0 8px 20px #235f4f1a;font:700 12px Arial}.token-1{top:18px;left:8px}.token-2{right:3px;top:55px}.token-3{bottom:20px;left:15px}.dark .float-token{background:var(--surface);border-color:var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin:19px 0 25px;border-radius:17px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:16px 10px}.metrics>div{display:flex;flex-direction:column;align-items:center;gap:2px;border-inline-end:1px solid var(--line)}.metrics>div:last-child{border:0}.metrics strong{font-size:23px;color:var(--primary);line-height:1.3}.metrics span{color:var(--muted);font-size:11px}
+.workspace{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(340px,.92fr);gap:20px;align-items:start}.editor-column{display:flex;flex-direction:column;gap:18px}.panel,.result-panel,.saved-panel{border:1px solid var(--line);background:var(--surface);border-radius:19px;box-shadow:var(--shadow)}.panel{padding:24px 25px}.section-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:22px}.step{width:39px;height:39px;flex-shrink:0;display:grid;place-items:center;border-radius:12px;background:var(--primary-soft);color:var(--primary);font:700 13px Arial}.section-head h2{font-size:18px;margin:0 0 2px;letter-spacing:-.3px}.section-head p{margin:0;font-size:12px;color:var(--muted)}.minor-label{font-size:12px;font-weight:800;margin-bottom:9px}
+.templates{display:flex;gap:9px;flex-wrap:wrap}.template-chip{background:var(--surface2);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:12px;font-size:12px}.template-chip:hover{border-color:var(--primary);background:var(--primary-soft)}.template-chip.active{background:var(--primary-soft);color:var(--primary);border-color:var(--primary)}.templates-wrap{margin-bottom:21px}
+.library-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.library-head .minor-label{margin:0}.search-wrap{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--line);border-radius:11px;color:var(--muted);padding:0 10px;max-width:260px}.search-wrap input{border:0;background:transparent;height:36px;min-width:0;width:205px;outline:0;font-size:12px}.search-wrap span{font-size:22px}
+.categories{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}.category{background:transparent;color:var(--muted);padding:5px 11px;border-radius:20px;border:1px solid transparent;font-size:11px}.category.active{color:var(--primary);background:var(--primary-soft);border-color:#98cfb0}.category:hover{background:var(--surface2);color:var(--primary)}
+.command-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));direction:var(--cards-dir);gap:9px;max-height:382px;overflow:auto;scrollbar-color:#aacbbc transparent;scrollbar-width:thin;padding:2px;align-content:start}.command-grid.reversed{direction:var(--cards-dir)}.command-card{direction:var(--ui-dir);text-align:var(--ui-text-align);position:relative;border-radius:13px;background:var(--surface2);padding:var(--card-padding);min-height:104px;border:1px solid var(--line);cursor:pointer;user-select:none}.command-card:hover{border-color:#9fc9b2;transform:translateY(-2px)}.command-card.selected{border:1.5px solid var(--primary);background:var(--primary-soft);box-shadow:inset 0 0 0 1px var(--primary)}.command-card .cmd-code{display:block;color:var(--primary);direction:ltr;unicode-bidi:isolate;font:700 13px Arial,sans-serif;margin-bottom:8px;text-align:start}.command-card .cmd-name{display:block;font-weight:800;font-size:12px}.command-card .cmd-desc{font-size:10px;color:var(--muted);display:block;line-height:1.5;margin-top:3px}.command-card.selected:before{content:'✓';position:absolute;top:9px;inset-inline-end:10px;color:var(--primary);font-size:13px;font-weight:900}.empty-search{grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}.selected-command{margin-top:15px;background:var(--primary-soft);border:1px solid #c8e7d4;border-radius:12px;padding:10px 12px;font-size:12px;display:flex;align-items:center;gap:9px;color:var(--primary)}.dark .selected-command{border-color:var(--line)}.selected-command code{font-weight:800;direction:ltr;unicode-bidi:isolate}
+.field-label{font-weight:800;display:block;font-size:12px;margin:0 0 7px}.required{color:#d06b47}.idea-area,.small-area{border:1px solid var(--line);background:var(--surface2);width:100%;border-radius:12px;padding:13px 14px;line-height:1.8;resize:vertical;font-size:13px;min-height:90px}.idea-area{min-height:127px}.idea-area:focus,.small-area:focus{border-color:var(--primary);background:var(--surface);outline:2px solid #59b18a2e}.idea-footer{display:flex;justify-content:space-between;align-items:center;margin:4px 0 16px;color:var(--muted);font-size:11px}.text-action{color:var(--primary);font-weight:700;background:transparent;padding:4px 0;font-size:11px}.small-area{margin-bottom:17px;min-height:65px}
+.idea-actions{display:flex;align-items:center;gap:14px}.clear-action{display:inline-flex;gap:3px;align-items:center;background:#fff3ed;color:#ac5238;border:1px solid #f3d9cc;padding:5px 9px;border-radius:8px;font-size:11px;font-weight:800}.clear-action:hover{background:#ffe4d7}.dark .clear-action{background:#49312b;color:#f0ac95;border-color:#65453b}.custom-command-label{margin-top:17px}.line-input{display:block;width:100%;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--surface2);padding:0 12px;outline:0;direction:auto}.line-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px #2a8d6240}
+.advanced-section{border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:20px;background:linear-gradient(135deg,var(--surface2),var(--surface));}.advanced-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}.advanced-header strong{font-size:14px}.advanced-header p{font-size:11px;margin:4px 0;color:var(--muted)}.advanced-header>span{color:var(--gold);font:800 10px Arial;border:1px solid #dfc99d;background:#fbf0d9;padding:4px 8px;border-radius:7px}.dark .advanced-header>span{background:#4c3d27}.extra-label{margin-top:15px}.advanced-section .small-area{margin-bottom:0}.range-wrap{border:1px solid var(--line);border-radius:11px;background:var(--surface);padding:12px;margin-top:17px}.range-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:800;font-size:12px}.range-top output{color:var(--primary);font:700 12px Arial}.range-wrap input[type=range]{width:100%;accent-color:var(--primary);cursor:pointer;margin:13px 0 4px}.range-ends{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}
+.tertiary-row{margin-top:8px}.tertiary-row button{min-height:29px;color:var(--muted);font-size:10px;border-style:dashed}
+.command-card{transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}.command-card:hover{box-shadow:0 9px 18px #225d4910}.panel{transition:border-color .2s}.panel:focus-within{border-color:#b2d4c1}.result-panel{border-color:#cce4d4;box-shadow:0 18px 45px #21543b12}.dark .result-panel{border-color:var(--line)}
+.upload-area{text-align:center;border:1.5px dashed #a9cdbc;background:var(--surface2);border-radius:13px;padding:22px 15px;margin-bottom:12px;transition:border-color .2s,background .2s}.upload-area.dragover{background:var(--primary-soft);border-color:var(--primary)}.upload-icon{border-radius:12px;width:37px;height:37px;margin:0 auto 5px;display:grid;place-items:center;font-size:25px;color:var(--primary);background:var(--primary-soft)}.upload-area strong{display:block;font-size:13px}.upload-area p{font-size:11px;color:var(--muted);max-width:445px;margin:6px auto 12px}.upload-button{display:inline-block;border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:7px 14px;color:var(--text);cursor:pointer;font-size:11px;font-weight:700}.upload-button:hover{border-color:var(--primary)}
+.file-list{display:flex;flex-direction:column;gap:6px;margin-bottom:9px}.file-item{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:10px;background:var(--surface2);padding:8px 10px}.file-icon{width:31px;height:31px;flex-shrink:0;border-radius:8px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-size:11px;font-weight:800}.file-info{min-width:0;flex:1}.file-info strong{font-size:11px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.file-info small{font-size:10px;color:var(--muted)}.file-remove{background:transparent;color:var(--muted);font-size:18px;border-radius:7px;padding:3px 8px}.file-remove:hover{background:#f9e4db;color:#a34b33}.check-row{display:flex;align-items:center;gap:9px;font-size:12px;cursor:pointer}.check-row input{accent-color:var(--primary);width:16px;height:16px;flex:none}.hint-line{font-size:10px;color:var(--muted);margin-top:8px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 12px}.field{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:12px}.field select{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface2);font-size:12px}.field select:focus{border-color:var(--primary)}.toggles{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:23px 0 22px;padding:17px;background:var(--surface2);border-radius:12px}.modifier-section{border-top:1px solid var(--line);padding-top:18px}.modifier-grid{display:flex;gap:8px;flex-wrap:wrap}.modifier-btn{background:var(--surface2);border:1px solid var(--line);border-radius:18px;padding:6px 11px;font-size:11px;color:var(--muted);direction:ltr}.modifier-btn.selected{background:var(--primary-soft);color:var(--primary);border-color:#83c8a5}.appearance-preview{display:flex;direction:var(--cards-dir);gap:10px;margin-top:16px;background:var(--surface2);border:1px dashed var(--line);padding:12px;border-radius:12px}.fake-card{background:var(--surface);border:1px solid var(--line);padding:12px;border-radius:9px;min-width:0;flex:1;font:700 11px Arial;color:var(--primary);text-align:var(--ui-text-align)}.fake-card small{display:block;color:var(--muted);font:11px Tahoma,Arial;margin-top:3px}
+.preview-column{position:sticky;top:15px;display:flex;flex-direction:column;gap:16px}.result-panel{overflow:hidden;padding:24px}.result-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.result-head h2{font-size:21px;letter-spacing:-.5px;margin:2px 0 0}.status-dot{font-size:10px;color:var(--primary);display:flex;align-items:center;gap:5px;background:var(--primary-soft);border-radius:15px;padding:5px 9px;white-space:nowrap}.status-dot>span:first-child{height:6px;width:6px;border-radius:50%;background:var(--primary)}.result-tags{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 12px}.result-tags span{direction:ltr;background:var(--surface2);color:var(--primary);border:1px solid var(--line);border-radius:8px;font:700 10px Arial;padding:5px 8px}
+.result-paper{border:1px solid var(--line);background:var(--surface2);border-radius:13px;padding:17px;max-height:570px;min-height:270px;overflow:auto;scrollbar-width:thin;scrollbar-color:#a8bfb3 transparent}.result-paper pre{font:12px/2 Tahoma,"Segoe UI",Arial,sans-serif;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;margin:0;direction:inherit;text-align:inherit}.result-meta{display:flex;justify-content:space-between;margin:9px 2px 14px;color:var(--muted);font-size:10px}.result-actions{display:flex;gap:8px}.result-actions button{flex:1;min-height:40px}.primary-btn,.secondary-btn,.ghost-btn,.mini-primary{display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:11px;padding:9px 12px;font-size:12px;font-weight:800}.primary-btn{background:var(--primary);color:#fff}.primary-btn:hover{background:var(--primary-deep)}.secondary-btn{background:var(--primary-soft);color:var(--primary);border:1px solid #b7dcc9}.secondary-btn:hover{background:#d9eee0}.ghost-btn{background:transparent;color:var(--muted);border:1px solid var(--line)}.ghost-btn:hover{color:var(--primary);border-color:var(--primary)}.secondary-row{margin-top:9px}.result-note{font-size:10px;color:var(--muted);margin:13px 1px 0}
+.saved-panel{padding:18px 20px}.saved-title{display:flex;justify-content:space-between;align-items:center;gap:8px}.saved-title h3{margin:0;font-size:14px}.mini-primary{border:1px solid var(--line);background:var(--primary-soft);color:var(--primary);font-size:10px;padding:6px 9px}.saved-list{margin-top:13px;display:flex;flex-direction:column;gap:8px}.saved-empty{padding:15px 7px;text-align:center;font-size:11px;color:var(--muted);background:var(--surface2);border-radius:10px}.saved-item{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:10px;padding:8px}.saved-item .saved-name{flex:1;min-width:0;text-align:start;background:transparent;color:var(--text);font-weight:700;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.saved-item .saved-remove{background:transparent;color:#a67570;font-size:17px}.quote-block{padding:19px 23px;background:linear-gradient(110deg,var(--primary-soft),var(--surface2));border-radius:15px;color:var(--primary);font-weight:700;display:flex;gap:10px;align-items:start}.quote-block span{font-size:19px}.quote-block p{font-size:12px;line-height:1.9;margin:0}.footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:20px max(30px,calc((100vw - 1380px)/2));font-size:11px;color:var(--muted)}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%) translateY(80px);opacity:0;pointer-events:none;z-index:20;background:#183f31;color:#fff;border-radius:12px;padding:10px 20px;box-shadow:0 12px 35px #0003;transition:opacity .2s,transform .2s;font-size:12px;text-align:center}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+dialog{border:1px solid var(--line);border-radius:18px;padding:25px;background:var(--surface);color:var(--text);min-width:min(90vw,370px);box-shadow:0 30px 90px #0004}dialog::backdrop{background:#07201688}dialog h3{margin:0 0 14px}dialog input{width:100%;border:1px solid var(--line);background:var(--surface2);border-radius:9px;padding:10px;margin-bottom:15px}.dialog-actions{display:flex;gap:8px;justify-content:flex-end}
+@media(max-width:1080px){.workspace{grid-template-columns:minmax(0,1.4fr) minmax(310px,.95fr)}.shell{padding:25px 18px}.topbar,.footer{padding-inline:18px}.panel{padding:20px}.command-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:30px}.hero-decoration{margin-inline-end:0}}
+@media(max-width:790px){.workspace{grid-template-columns:1fr}.preview-column{position:static;display:grid;grid-template-columns:1fr}.hero-decoration{display:none}.hero{min-height:190px}.preview-column .result-paper{max-height:380px}.privacy-pill{display:none}.metrics span{font-size:10px}}
+@media(max-width:480px){.shell{padding:14px 10px}.topbar{padding:12px}.brand-text strong{font-size:20px}.brand-symbol{height:37px;width:37px}.hero{padding:24px 20px;min-height:180px;border-radius:17px}.hero h1{font-size:28px}.hero p{font-size:12px}.metrics{padding:12px 3px}.metrics strong{font-size:16px}.metrics span{font-size:9px}.panel{padding:17px 14px}.section-head h2{font-size:16px}.command-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-height:340px}.library-head{align-items:stretch;flex-direction:column}.search-wrap{max-width:none}.search-wrap input{width:100%}.form-grid{grid-template-columns:1fr 1fr;gap:11px 8px}.toggles{grid-template-columns:1fr}.result-panel{padding:18px 14px}.appearance-preview{gap:5px}.fake-card{padding:7px;font-size:9px}.fake-card small{font-size:9px}}
+@media(max-width:600px){.new-request-top{padding:8px 10px;font-size:11px}.new-request-top span:first-child{display:none}.hero-chips{justify-content:flex-start}.hero-chips span{font-size:9px}.idea-footer{align-items:flex-start;gap:6px}.idea-actions{gap:7px;flex-wrap:wrap}.advanced-section{padding:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+.smart-panel{border-color:#badac8;background:linear-gradient(145deg,var(--surface),var(--surface2))}.smart-panel .section-head{margin-bottom:14px}.smart-caption{font-size:12px;color:var(--muted);margin:0 0 15px}.smart-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.smart-field{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:800}.smart-field.wide{grid-column:1/-1}.smart-field input,.smart-field select,.smart-field textarea,.character-select{width:100%;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--text);padding:10px 12px;min-height:42px;outline:0;font:inherit;font-weight:400}.smart-field textarea{resize:vertical;min-height:75px}.smart-field input:focus,.smart-field select:focus,.smart-field textarea:focus,.character-select:focus{outline:2px solid #59b18a55;border-color:var(--primary)}.character-tools{margin-top:16px;padding:15px;border:1px dashed #93c6aa;border-radius:14px;background:var(--primary-soft)}.character-tools-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:800;margin-bottom:10px}.character-actions{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:6px}.character-actions button{font-size:11px;white-space:nowrap}.smart-examples{margin-top:11px;display:flex;gap:8px;flex-wrap:wrap}.smart-helper{font-size:11px;color:var(--muted);margin:9px 0 0}.quality-box{margin:12px 0;border:1px solid var(--line);border-radius:13px;background:var(--surface2);padding:11px 13px}.quality-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;font-weight:800}.quality-top small{font-size:10px;color:var(--muted)}.quality-list{display:flex;flex-direction:column;gap:7px;margin-top:9px}.quality-item{font-size:11px;display:flex;gap:8px;justify-content:space-between;align-items:start;border-top:1px solid var(--line);padding-top:7px}.quality-item span{flex:1}.quality-item button{border:1px solid var(--line);border-radius:8px;background:var(--primary-soft);color:var(--primary);padding:3px 8px;font-size:10px;font-weight:800}.quality-ok{color:var(--primary);font-size:11px;margin-top:7px}.quality-count{color:#a65a31}.library-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.library-actions button{flex:1}.phase-note{padding:9px 12px;background:var(--surface2);border:1px solid var(--line);border-radius:11px;font-size:11px;color:var(--muted);margin-top:10px}.phase-note strong{color:var(--primary)}
+.product-panel{border-color:#a2cfb3;background:linear-gradient(155deg,var(--surface),var(--primary-soft))}.product-panel .section-head{margin-bottom:15px}.product-fields{margin:12px 0}.product-check{padding:8px 0}.product-preview{background:var(--surface);border:1px solid #a9d5bd;padding:13px 15px;border-radius:13px;margin:14px 0 0}.product-preview strong{font-size:12px;color:var(--primary)}.product-preview p{font-size:12px;font-weight:700;margin:4px 0 0}.product-preview small{display:block;font-size:11px;color:var(--muted);margin-top:4px}.product-note{font-size:11px;color:var(--muted);margin:9px 0 0}
+.footer-panel .section-head{margin-bottom:14px}.footer-toggle{padding:12px 14px;background:var(--primary-soft);border-radius:12px;font-weight:800}.footer-options{margin-top:16px}.footer-options[hidden]{display:none}.footer-input{margin-bottom:14px}.footer-separator-option{margin:13px 0}.footer-mock{border:1px solid var(--line);border-radius:14px;background:var(--surface2);padding:12px;margin-top:14px}.footer-mock-content{height:64px;display:grid;place-items:center;color:var(--muted);font-size:11px;border:1px dashed var(--line);border-radius:9px;background:var(--surface)}.footer-mock-caption{margin:7px 0 0;font-size:10px;color:var(--muted)}.footer-mock-band{padding:10px 12px 2px;margin-top:12px;color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;min-height:30px}.footer-mock-band.has-rule{border-top:1px solid var(--line)}.footer-mock-band.medium{font-size:13px}
+@media(max-width:650px){.smart-fields{grid-template-columns:1fr}.character-actions{grid-template-columns:1fr 1fr}.character-actions select{grid-column:1/-1}.smart-field.wide{grid-column:auto}.quality-item{flex-wrap:wrap}}
+
+</style>
+  
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="وسيط">
+      <div class="brand-symbol">و<span>✦</span></div>
+      <div class="brand-text"><strong>وسيط</strong><small>WASIT · PROMPT STUDIO</small></div>
+    </div>
+    <nav class="top-actions" aria-label="إعدادات سريعة">
+      <span class="privacy-pill" data-i18n="localPrivate">◉ إعداداتك محفوظة في متصفحك</span>
+      <button class="new-request-top" id="newRequestTop" type="button"><span>＋</span> <span data-i18n="newRequest">طلب جديد</span></button>
+      <button class="icon-btn" id="themeToggle" title="تبديل المظهر" aria-label="تبديل المظهر">☾</button>
+      <button class="lang-btn" id="languageToggle" title="Switch language">EN</button>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="green-dot"></span><span data-i18n="eyebrow">من الفكرة إلى الأمر الذكي</span></div>
+        <h1 data-i18n="heroTitle">فكرتك تستحق <em>أمرًا متقنًا.</em></h1>
+        <p data-i18n="heroBody">اختر ما تريد، أضف فكرتك، واضبط كل تفصيل. وسيط يحوّل اختصاراتك إلى برومبت متكامل وجاهز للاستخدام.</p>
+        <div class="hero-chips"><span>✦ Wasit 2.0</span><span>136 Commands</span><span>Smart task fields</span><span>Single-file ready</span></div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="orbit-center">/</div><span class="float-token token-1">/Comic</span><span class="float-token token-2">/AR</span><span class="float-token token-3">/Creative</span>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="مميزات المولد">
+      <div><strong id="commandsCount">+70</strong><span data-i18n="metricCommands">أمر قابل للاختيار</span></div>
+      <div><strong data-i18n="metricCombinationsNumber">∞</strong><span data-i18n="metricCombinations">تركيبات بلا حدود</span></div>
+      <div><strong>AR / EN</strong><span data-i18n="metricLanguages">لغتان واتجاهان</span></div>
+      <div><strong>01</strong><span data-i18n="metricPrivacy">خصوصية أولًا</span></div>
+    </section>
+
+    <div class="workspace">
+      <div class="editor-column">
+        <section class="panel" id="taskSection">
+          <div class="section-head"><div class="step">01</div><div><h2 data-i18n="stepTask">ما الذي تريد إنجازه؟</h2><p data-i18n="stepTaskSub">ابدأ بأمر رئيسي، أو استخدم قالبًا جاهزًا.</p></div></div>
+          <div class="templates-wrap">
+            <div class="minor-label" data-i18n="quickTemplates">قوالب سريعة</div>
+            <div class="templates" id="templates"></div>
+          </div>
+          <div class="library-head"><div class="minor-label" data-i18n="commandLibrary">مكتبة الأوامر</div><label class="search-wrap"><span>⌕</span><input id="searchCommands" type="search" placeholder="ابحث عن أمر أو مهمة..." data-placeholder="searchPlaceholder" autocomplete="off"></label></div>
+          <div class="categories" id="categories" role="tablist" aria-label="تصنيفات الأوامر"></div>
+          <div class="command-grid" id="commandGrid" role="group" aria-label="الأوامر المتاحة"></div>
+          <div class="selected-command" id="selectedCommandInfo"></div>
+          <label class="field-label custom-command-label" for="customCommand" data-i18n="customCommand">أو اختر أمرًا مخصصًا (اختياري)</label>
+          <input id="customCommand" class="line-input" maxlength="50" placeholder="مثال: /MySpecialTask" data-placeholder="customCommandPlaceholder" autocomplete="off" spellcheck="false">
+        </section>
+
+        <section class="panel">
+          <div class="section-head"><div class="step">02</div><div><h2 data-i18n="stepIdea">أضف الفكرة والمراجع</h2><p data-i18n="stepIdeaSub">صف فكرتك بلغتك، وأضف ملفًا يدعم المهمة.</p></div></div>
+          <label class="field-label" for="idea" data-i18n="ideaLabel">فكرتك أو المهمة المطلوبة <span class="required">*</span></label>
+          <textarea id="idea" class="idea-area" rows="5" placeholder="مثال: قصة مصورة من 6 لوحات عن طفل يعلّم روبوتًا اللغة العربية..." data-placeholder="ideaPlaceholder"></textarea>
+          <div class="idea-footer"><button id="insertExample" class="text-action" type="button">✦ <span data-i18n="exampleIdea">أدخل مثالًا مناسبًا</span></button><div class="idea-actions"><span id="ideaCounter">0</span><button id="newRequest" class="clear-action" type="button">↺ <span data-i18n="clearRequest">مسح الطلب والبدء من جديد</span></button></div></div>
+          <label class="field-label" for="constraints" data-i18n="constraintsLabel">شروط إضافية (اختياري)</label>
+          <textarea id="constraints" class="small-area" rows="2" placeholder="مثل: تجنّب المصطلحات المعقدة، استخدم أمثلة سعودية..." data-placeholder="constraintsPlaceholder"></textarea>
+
+          <div class="upload-area" id="dropZone" role="group" aria-label="إرفاق ملفات مرجعية">
+            <div class="upload-icon">⇧</div><strong data-i18n="dropTitle">أسقط ملفاتك هنا أو اختر من الجهاز</strong>
+            <p data-i18n="dropSub">النصوص تُقرأ محليًا، وملفات PDF والصور وWord تُذكر كمرفقات تحتاج لإضافتها مع البرومبت.</p>
+            <label class="upload-button" for="fileInput" data-i18n="chooseFiles">اختيار ملفات</label>
+            <input id="fileInput" type="file" multiple accept=".txt,.md,.csv,.json,.html,.xml,.log,.yaml,.yml,.js,.jsx,.ts,.tsx,.css,.py,.sql,.srt,.vtt,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.webp,.svg" hidden>
+          </div>
+          <div id="fileList" class="file-list" aria-live="polite"></div>
+          <label class="check-row"><input id="includeFileText" type="checkbox" checked><span data-i18n="includeFileText">أدرج محتوى الملفات النصية داخل البرومبت</span></label>
+          <div class="hint-line" data-i18n="filesHint">الملفات لا تُرفع إلى خادم؛ المعالجة تتم داخل المتصفح. إرفاق الاسم في البرومبت لا ينقل الملف إلى ChatGPT.</div>
+        </section>
+
+        <section class="panel smart-panel" id="specializedSection">
+          <div class="section-head"><div class="step">✦</div><div><h2 data-i18n="smartTitle">إعدادات ذكية حسب المهمة</h2><p data-i18n="smartSub">تتبدل تلقائيًا حسب الأمر الذي اخترته، مع الاحتفاظ بتفاصيل كل مجال.</p></div></div>
+          <div id="smartIntro" class="smart-caption"></div>
+          <div id="specializedFields" class="smart-fields"></div>
+          <div id="characterTools" class="character-tools" hidden></div>
+        </section>
+
+        <section class="panel product-panel" id="productSection">
+          <div class="section-head"><div class="step">▣</div><div><h2 data-i18n="productTitle">المنتج الرقمي النهائي</h2><p data-i18n="productSub">لكل أمر منتج مناسب؛ يتضمن البرومبت طلب إنشاء ملف نهائي قابل للتنزيل، لا مجرد وصف له.</p></div></div>
+          <div class="form-grid product-fields">
+            <label class="field"><span data-i18n="productFormat">صيغة المنتج المطلوبة</span><select id="artifactFormat"><option value="auto">تلقائي حسب الأمر</option><option value="png">PNG — صورة</option><option value="pdf">PDF — مستند</option><option value="docx">DOCX — Word</option><option value="pptx">PPTX — PowerPoint</option><option value="xlsx">XLSX — Excel</option><option value="html">HTML — تفاعلي</option><option value="svg">SVG — رسم متجهي</option><option value="zip">ZIP — ملفات مشروع</option><option value="mp3">MP3 — صوت</option><option value="mp4">MP4 — فيديو</option><option value="csv">CSV — بيانات</option><option value="json">JSON — بيانات</option><option value="md">MD — Markdown</option></select></label>
+            <label class="field"><span data-i18n="productFileName">اسم المنتج (اختياري)</span><input id="artifactName" class="line-input" maxlength="90" placeholder="مثال: الاشكال-الهندسية" data-placeholder="productFilePlaceholder"></label>
+          </div>
+          <label class="check-row product-check"><input id="includeEditable" type="checkbox" checked><span data-i18n="productEditable">اطلب نسخة قابلة للتعديل أو ملف المصدر، متى أمكن</span></label>
+          <div class="product-preview" aria-live="polite"><strong data-i18n="productSuggestion">المنتج المقترح لهذا الأمر</strong><p id="artifactPreview"></p><small id="artifactPreviewHelp"></small></div>
+          <p class="product-note" data-i18n="productDisclosure">وسيط ينشئ البرومبت؛ المساعد الذكي الذي ترسل إليه البرومبت هو من يُنشئ المنتج، حسب أدواته المتاحة.</p>
+        </section>
+
+        <section class="panel footer-panel" id="footerSection">
+          <div class="section-head"><div class="step">✎</div><div><h2 data-i18n="footerTitle">تذييل التوثيق الخارجي</h2><p data-i18n="footerSub">توقيع أو بيانات المعلم في هامش مستقل أسفل المنتج، خارج الرسم أو النص الأساسي.</p></div></div>
+          <label class="check-row footer-toggle"><input id="footerEnabled" type="checkbox"><span data-i18n="footerEnable">إضافة تذييل توثيق اختياري إلى المنتج النهائي</span></label>
+          <div id="footerOptions" class="footer-options" hidden>
+            <label class="field-label" for="footerText" data-i18n="footerTextLabel">نص التذييل — يُكتب كما هو</label>
+            <textarea id="footerText" class="small-area footer-input" rows="3" maxlength="1200" placeholder="إعداد: أ. ... | المدرسة: ... | العام الدراسي: ..." data-placeholder="footerPlaceholder"></textarea>
+            <div class="form-grid">
+              <label class="field"><span data-i18n="footerAlignLabel">محاذاة التذييل</span><select id="footerAlign"><option value="right">يمين</option><option value="center">وسط</option><option value="left">يسار</option></select></label>
+              <label class="field"><span data-i18n="footerScopeLabel">موضع التذييل في الأعمال متعددة الصفحات</span><select id="footerScope"><option value="all">أسفل كل صفحة</option><option value="last">الصفحة الأخيرة فقط</option></select></label>
+              <label class="field"><span data-i18n="footerSizeLabel">حجم خط التذييل</span><select id="footerSize"><option value="small">صغير وهادئ</option><option value="medium">متوسط</option></select></label>
+            </div>
+            <label class="check-row footer-separator-option"><input id="footerSeparator" type="checkbox"><span data-i18n="footerSeparatorLabel">إظهار خط فاصل رفيع أعلى التذييل</span></label>
+            <div class="footer-mock" aria-live="polite"><div class="footer-mock-content" data-i18n="footerMockContent">مساحة العمل الأصلية — دون تذييل</div><div class="footer-mock-caption" data-i18n="footerMockCaption">الهامش الخارجي السفلي المنفصل</div><div id="footerMockBand" class="footer-mock-band"></div></div>
+            <p class="product-note" data-i18n="footerNote">هذه معاينة لموضع التذييل فقط؛ يطلب وسيط من الذكاء الاصطناعي إضافته إلى الملف النهائي في منطقة منفصلة.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-head"><div class="step">03</div><div><h2 data-i18n="stepFineTune">اضبط أسلوب الاستجابة</h2><p data-i18n="stepFineTuneSub">تحكم في ما سيظهر في النتيجة وليس في مظهر الأداة فقط.</p></div></div>
+          <div class="form-grid">
+            <label class="field"><span data-i18n="promptLanguage">لغة البرومبت والنتيجة</span><select id="promptLang"><option value="ar">العربية</option><option value="en">English</option><option value="both">العربية والإنجليزية</option></select></label>
+            <label class="field"><span data-i18n="audience">الجمهور المستهدف</span><select id="audience"><option value="general">عام</option><option value="kids">أطفال</option><option value="beginners">مبتدئون</option><option value="students">طلاب</option><option value="teachers">معلمون</option><option value="professionals">متخصصون</option></select></label>
+            <label class="field"><span data-i18n="tone">النبرة</span><select id="tone"><option value="friendly">ودودة وواضحة</option><option value="formal">رسمية</option><option value="creative">إبداعية</option><option value="humorous">مرحة</option><option value="academic">أكاديمية</option><option value="persuasive">إقناعية</option></select></label>
+            <label class="field"><span data-i18n="depth">مستوى التفصيل</span><select id="depth"><option value="balanced">متوازن</option><option value="brief">مختصر</option><option value="deep">مفصل</option><option value="step">خطوة بخطوة</option></select></label>
+            <label class="field"><span data-i18n="outputFormat">صيغة المخرجات</span><select id="format"><option value="structured">فقرات بعناوين</option><option value="table">جدول</option><option value="bullets">نقاط</option><option value="steps">خطوات مرقمة</option><option value="json">JSON</option><option value="dialogue">حوار</option><option value="storyboard">لوحات ومشاهد</option><option value="code">كود قابل للتجربة</option></select></label>
+            <label class="field"><span data-i18n="variants">عدد النتائج / اللوحات</span><select id="quantity"><option value="auto">تلقائي</option><option value="1">1</option><option value="3">3</option><option value="4">4</option><option value="6">6</option><option value="8">8</option><option value="10">10</option><option value="12">12</option></select></label>
+            <label class="field"><span data-i18n="numerals">شكل الأرقام في النتيجة</span><select id="numerals"><option value="western">0 1 2 3</option><option value="arabic">٠ ١ ٢ ٣</option></select></label>
+            <label class="field"><span data-i18n="resultAlignment">محاذاة النص الناتج</span><select id="resultAlign"><option value="natural">حسب اللغة</option><option value="right">يمين</option><option value="left">يسار</option><option value="center">وسط</option></select></label>
+            <label class="field"><span data-i18n="resultDirection">اتجاه المحتوى الناتج</span><select id="resultDir"><option value="auto">حسب اللغة</option><option value="rtl">من اليمين لليسار</option><option value="ltr">من اليسار لليمين</option></select></label>
+            <label class="field"><span data-i18n="outputOrder">ترتيب العناصر الناتجة</span><select id="outputOrder"><option value="logical">ترتيب طبيعي</option><option value="rtl">يمين ← يسار</option><option value="ltr">يسار ← يمين</option></select></label>
+          </div>
+          <div class="toggles">
+            <label class="check-row"><input type="checkbox" id="needExamples" checked><span data-i18n="needExamples">أضف أمثلة عملية</span></label>
+            <label class="check-row"><input type="checkbox" id="needQuestions" checked><span data-i18n="needQuestions">اطرح أسئلة توضيحية إذا كانت المعلومات ناقصة</span></label>
+            <label class="check-row"><input type="checkbox" id="needSources"><span data-i18n="needSources">اطلب مصادر موثوقة عند وجود حقائق</span></label>
+            <label class="check-row"><input type="checkbox" id="needChecklist"><span data-i18n="needChecklist">أضف قائمة تحقق نهائية</span></label>
+          </div>
+          <div class="advanced-section">
+            <div class="advanced-header"><div><strong data-i18n="advancedTitle">المحرك المتقدم للبرومبت</strong><p data-i18n="advancedSub">خصص الدور والسياق والقيود وطريقة بناء البرومبت.</p></div><span>PRO</span></div>
+            <div class="form-grid">
+              <label class="field"><span data-i18n="platformLabel">المنصة المقصودة</span><select id="platform"><option value="general">أي مساعد ذكي</option><option value="chatgpt">ChatGPT</option><option value="claude">Claude</option><option value="gemini">Gemini</option><option value="copilot">Copilot</option></select></label>
+              <label class="field"><span data-i18n="promptModeLabel">بنية البرومبت</span><select id="promptMode"><option value="structured">منظم بعناوين</option><option value="compact">موجز</option><option value="xml">وسوم XML</option><option value="json">JSON</option></select></label>
+              <label class="field"><span data-i18n="sourcePolicyLabel">التعامل مع المصادر</span><select id="sourcePolicy"><option value="balanced">تحقق عند الضرورة</option><option value="strict">توثيق صارم</option><option value="creative">حرية إبداعية</option></select></label>
+              <label class="field"><span data-i18n="maxWordsLabel">حد طول الاستجابة</span><select id="maxWords"><option value="auto">بدون حد محدد</option><option value="100">100 كلمة</option><option value="250">250 كلمة</option><option value="500">500 كلمة</option><option value="1000">1000 كلمة</option><option value="2000">2000 كلمة</option></select></label>
+            </div>
+            <label class="field-label extra-label" for="persona" data-i18n="personaLabel">الدور أو الخبرة التي تريدها من المساعد</label>
+            <input id="persona" class="line-input" placeholder="مثال: خبير في تصميم مناهج تعليمية تفاعلية" data-placeholder="personaPlaceholder">
+            <label class="field-label extra-label" for="context" data-i18n="contextLabel">سياق إضافي أو معلومات خلفية</label>
+            <textarea id="context" class="small-area" rows="2" placeholder="من المستفيد؟ ما الوضع الحالي؟" data-placeholder="contextPlaceholder"></textarea>
+            <label class="field-label extra-label" for="avoid" data-i18n="avoidLabel">ما الذي يجب تجنبه؟</label>
+            <textarea id="avoid" class="small-area" rows="2" placeholder="مثال: لا تستخدم مصطلحات معقدة أو حشوًا" data-placeholder="avoidPlaceholder"></textarea>
+            <label class="field-label extra-label" for="successCriteria" data-i18n="successLabel">كيف تعرف أن النتيجة ناجحة؟</label>
+            <textarea id="successCriteria" class="small-area" rows="2" placeholder="مثال: يعمل الكود مباشرة، ويوجد مثال واضح لكل فكرة" data-placeholder="successPlaceholder"></textarea>
+            <div class="range-wrap"><div class="range-top"><label for="creativity" data-i18n="creativityLabel">درجة الإبداع المطلوبة</label><output id="creativityValue">50%</output></div><input id="creativity" type="range" min="0" max="100" step="10" value="50"><div class="range-ends"><span data-i18n="creativeConservative">منضبط</span><span data-i18n="creativeExploratory">ابتكاري</span></div></div>
+          </div>
+          <div class="modifier-section"><div class="minor-label" data-i18n="modifiersLabel">أوامر مساعدة — اختر ما يناسبك</div><div id="modifierGrid" class="modifier-grid"></div></div>
+        </section>
+
+        <section class="panel appearance-panel">
+          <div class="section-head"><div class="step">04</div><div><h2 data-i18n="stepAppearance">تصميم واجهتك على ذوقك</h2><p data-i18n="stepAppearanceSub">هذه الإعدادات تغيّر مظهر المولّد مباشرة.</p></div></div>
+          <div class="form-grid">
+            <label class="field"><span data-i18n="uiDirection">اتجاه الواجهة</span><select id="uiDir"><option value="rtl">عربي — يمين إلى يسار</option><option value="ltr">English — left to right</option></select></label>
+            <label class="field"><span data-i18n="cardOrder">ترتيب بطاقات الأوامر</span><select id="cardOrder"><option value="rtl">يمين ← يسار</option><option value="ltr">يسار ← يمين</option><option value="reverse">عكس الترتيب</option></select></label>
+            <label class="field"><span data-i18n="uiAlign">محاذاة النص في الواجهة</span><select id="uiAlign"><option value="start">بداية السطر</option><option value="center">وسط</option><option value="end">نهاية السطر</option></select></label>
+            <label class="field"><span data-i18n="cardDensity">حجم البطاقات</span><select id="density"><option value="comfortable">مريح</option><option value="compact">مدمج</option></select></label>
+          </div>
+          <div class="appearance-preview" id="appearancePreview"><span class="fake-card">/Comic<small>قصة مصورة</small></span><span class="fake-card">/Lesson<small>درس تعليمي</small></span><span class="fake-card">/App<small>تطبيق تفاعلي</small></span></div>
+        </section>
+      </div>
+
+      <aside class="preview-column" aria-label="البرومبت الناتج">
+        <section class="result-panel">
+          <div class="result-head"><div><div class="eyebrow" data-i18n="livePreview">معاينة مباشرة</div><h2 data-i18n="resultTitle">البرومبت النهائي</h2></div><span class="status-dot"><span></span><span data-i18n="ready">جاهز للنسخ</span></span></div>
+          <div class="result-tags" id="resultTags"></div>
+          <div class="quality-box" id="qualityBox" aria-live="polite"><div class="quality-top"><span id="qualityTitle">تدقيق البرومبت</span><small id="qualityCount"></small></div><div id="qualityList" class="quality-list"></div></div>
+          <div class="result-paper" id="resultPaper"><pre id="promptOutput" aria-live="polite"></pre></div>
+          <div class="result-meta"><span id="wordCount">0</span><span id="charCount">0</span></div>
+          <div class="result-actions"><button class="primary-btn" id="copyPrompt">▣ <span data-i18n="copyPrompt">نسخ البرومبت</span></button><button class="secondary-btn" id="downloadPrompt">↓ <span data-i18n="download">تنزيل TXT</span></button></div>
+          <div class="result-actions secondary-row"><button class="ghost-btn" id="exportJson">⇩ <span data-i18n="exportJson">تصدير الإعدادات JSON</span></button><button class="ghost-btn" id="newRequestResult">＋ <span data-i18n="newRequest">طلب جديد</span></button></div>
+          <div class="result-actions tertiary-row"><button class="ghost-btn" id="resetAll">↺ <span data-i18n="reset">إعادة ضبط جميع الإعدادات</span></button></div>
+          <p class="result-note" data-i18n="resultNote">انسخ البرومبت والصقه في ChatGPT. أرفق الملفات غير النصية معه يدويًا عند الحاجة.</p>
+        </section>
+        <section class="saved-panel"><div class="saved-title"><h3 data-i18n="myPresets">قوالبي المحفوظة</h3><button id="savePreset" class="mini-primary" data-i18n="saveCurrent">+ حفظ الحالي</button></div><div id="savedPresets" class="saved-list"></div><div class="library-actions"><button class="ghost-btn" id="exportLibrary" type="button" data-i18n="exportLibrary">تصدير مكتبتي JSON</button><button class="ghost-btn" id="importLibrary" type="button" data-i18n="importLibrary">استيراد مكتبة</button><input id="libraryFileInput" type="file" accept=".json,application/json" hidden></div><div class="phase-note"><strong data-i18n="offlineMode">وضع العمل المحلي</strong> · <span data-i18n="executionLater">يبني «وسيط» البرومبت ويدققه هنا. التنفيذ المباشر بالذكاء الاصطناعي إضافة مستقبلية اختيارية.</span></div></section>
+        <div class="quote-block"><span>✦</span><p data-i18n="quote">الأمر الجيد لا يختصر الكلمات فقط، بل يوضح المقصد ويقرب النتيجة.</p></div>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer"><span>وسيط — <span data-i18n="footerTagline">فكرتك، بصياغة أذكى.</span></span><span>WASIT © 2026</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="saveDialog"><form method="dialog" id="saveForm"><h3 data-i18n="saveDialogTitle">اسم القالب الجديد</h3><input id="presetName" maxlength="60" required placeholder="مثل: قصصي التعليمية"><div class="dialog-actions"><button value="cancel" class="ghost-btn" data-i18n="cancel">إلغاء</button><button id="confirmSave" value="save" class="primary-btn" data-i18n="save">حفظ</button></div></form></dialog>
+<script>
+(()=>{
+"use strict";
+const $=id=>document.getElementById(id);
+const CATALOG=[
+['Comic','creative','قصة مصوّرة','Comic','مشاهد ولوحات مع حوار','Panels, scenes and dialogue'],
+['Story','creative','قصة أدبية','Story','حبكة وشخصيات ونهاية','Plot, characters and ending'],
+['Manga','creative','مانغا','Manga','قصة مرئية بأسلوب المانغا','Manga-style narrative'],
+['Storyboard','creative','لوحة قصصية','Storyboard','تسلسل لقطات بصري','Shot-by-shot visual sequence'],
+['Script','creative','سيناريو','Script','مشاهد وحركة وحوار','Scenes, action and dialogue'],
+['Dialogue','creative','حوار','Dialogue','حوار طبيعي بين شخصيات','Natural character dialogue'],
+['Character','creative','بناء شخصية','Character','ملف مفصل لشخصية','Detailed character profile'],
+['Novel','creative','رواية','Novel','تصور فصول وحبكات','Chapters and story arcs'],
+['Poem','creative','قصيدة','Poem','نص شعري بحسب الفكرة','Poetry from an idea'],
+['GameStory','creative','قصة لعبة','Game narrative','عوالم ومهام ومسارات','Game world and quests'],
+['Teach','education','علّمني','Teach','تعليم تدريجي مع تطبيق','Progressive teaching'],
+['Lesson','education','خطة درس','Lesson plan','أهداف وأنشطة وتقييم','Goals, activities and assessment'],
+['Quiz','education','اختبار','Quiz','أسئلة وإجابات وتقييم','Questions and answers'],
+['MCQ','education','اختيار من متعدد','Multiple choice','أسئلة بخيارات واضحة','Multiple-choice questions'],
+['Flashcards','education','بطاقات تعليمية','Flashcards','سؤال وجواب للمراجعة','Review cards'],
+['Mindmap','education','خريطة ذهنية','Mind map','هيكلة الأفكار والعلاقات','Map ideas and connections'],
+['ELI5','education','تبسيط شديد','Explain simply','شرح مبسط جدًا','Very simple explanation'],
+['Bloom','education','تصنيف بلوم','Bloom taxonomy','أنشطة وفق مستويات التفكير','Cognitive levels of learning'],
+['Rubric','education','معايير تقييم','Rubric','سلم تقدير أداء','Scoring criteria'],
+['Workshop','education','ورشة عمل','Workshop','أنشطة زمنية وتفاعل','Timed hands-on activities'],
+['Compare','analysis','مقارنة','Compare','فروق ومزايا وعيوب','Differences and tradeoffs'],
+['SWOT','analysis','تحليل SWOT','SWOT analysis','قوة وضعف وفرص وتهديدات','Strengths, weaknesses, opportunities, threats'],
+['FiveWhys','analysis','لماذا خمس مرات','Five Whys','كشف الأسباب الجذرية','Root cause investigation'],
+['ProsCons','analysis','إيجابيات وسلبيات','Pros & cons','موازنة شاملة','Balanced pros and cons'],
+['Critique','analysis','نقد بنّاء','Critique','فحص الافتراضات والعيوب','Challenge assumptions'],
+['Plan','analysis','خطة عملية','Action plan','خطوات ومراحل وقياس','Steps, phases and metrics'],
+['Decision','analysis','دعم قرار','Decision aid','معايير وترجيح البدائل','Criteria and options'],
+['FirstPrinciples','analysis','مبادئ أولى','First principles','فكك المسألة لأساسياتها','Reason from fundamentals'],
+['Brainstorm','analysis','عصف ذهني','Brainstorm','توليد بدائل متنوعة','Generate diverse ideas'],
+['Roadmap','analysis','خارطة طريق','Roadmap','أولويات ومراحل تنفيذ','Milestones and priorities'],
+['Rewrite','writing','إعادة صياغة','Rewrite','معنى ثابت وصياغة أفضل','Rephrase without changing meaning'],
+['Summarize','writing','تلخيص','Summarize','استخراج خلاصة جوهرية','Concise key points'],
+['Humanize','writing','أسلوب طبيعي','Humanize','اجعل الصياغة طبيعية','Natural, readable style'],
+['Email','writing','بريد رسمي','Email','عنوان ومتن ورسالة واضحة','Subject and clear message'],
+['Article','writing','مقال','Article','مقدمة وأفكار وخاتمة','Introduction, body and conclusion'],
+['Speech','writing','خطاب','Speech','نص إلقاء مؤثر','Engaging spoken address'],
+['Translate','writing','ترجمة','Translate','ترجمة تراعي السياق','Context-sensitive translation'],
+['Proofread','writing','تدقيق لغوي','Proofread','تصحيح إملائي ونحوي','Spelling and grammar correction'],
+['SocialPost','writing','منشور اجتماعي','Social post','محتوى جذاب للنشر','Engaging social content'],
+['FAQ','writing','أسئلة شائعة','FAQ','أسئلة وأجوبة مرتبة','Organized Q&A'],
+['App','coding','إنشاء تطبيق','Build app','مخطط وتطبيق قابل للتجربة','Usable working application'],
+['Game','coding','إنشاء لعبة','Build game','لعبة تفاعلية بقواعد واضحة','Interactive playable game'],
+['Code','coding','كتابة كود','Write code','تنفيذ برمجي للمطلوب','Functional implementation'],
+['Debug','coding','تصحيح أخطاء','Debug','تحليل سبب الخطأ وإصلاحه','Find and fix defects'],
+['Refactor','coding','إعادة هيكلة','Refactor','تحسين الكود مع حفظ السلوك','Improve code while preserving behavior'],
+['CodeReview','coding','مراجعة كود','Code review','فحص جودة وأمان وصيانة','Quality and security review'],
+['UI','coding','تصميم واجهة','UI design','تخطيط الواجهة والتفاعل','Layout and interactions'],
+['Prototype','coding','نموذج أولي','Prototype','أسرع نسخة قابلة للتجربة','Testable first version'],
+['ExplainCode','coding','شرح الكود','Explain code','شرح الأسطر والمفاهيم','Explain logic and concepts'],
+['TestCases','coding','حالات اختبار','Test cases','اختبارات مع نتائج متوقعة','Tests and expected outcomes'],
+['Research','research','بحث موثق','Research','بحث منظم واستشهادات','Structured sourced research'],
+['Verify','research','التحقق','Fact-check','تدقيق ادعاءات ومصادر','Verify claims and sources'],
+['LiteratureReview','research','مراجعة أدبيات','Literature review','تلخيص وتحليل الدراسات','Synthesize existing studies'],
+['Report','research','تقرير','Report','تقرير مرتب بتوصيات','Structured report'],
+['Survey','research','استبيان','Survey','أسئلة لجمع البيانات','Data collection questions'],
+['DataAnalysis','research','تحليل بيانات','Data analysis','مقاييس وأنماط واستنتاجات','Patterns and insights'],
+['Timeline','research','خط زمني','Timeline','أحداث بتسلسل تاريخي','Chronological events'],
+['Citation','research','توثيق مصادر','Citations','تنسيق وإسناد المراجع','Source attribution'],
+['Presentation','business','عرض تقديمي','Presentation','شرائح وملاحظات متحدث','Slides and speaker notes'],
+['Marketing','business','خطة تسويق','Marketing plan','جمهور وقنوات ورسائل','Audience, channels and messages'],
+['BusinessPlan','business','خطة مشروع','Business plan','نموذج عمل وتكاليف','Business model and costs'],
+['AIDA','business','كتابة AIDA','AIDA copy','انتباه واهتمام ورغبة وإجراء','Attention, interest, desire, action'],
+['PAS','business','كتابة PAS','PAS copy','مشكلة وتأثير وحل','Problem, agitation, solution'],
+['Pitch','business','عرض فكرة','Pitch','طرح مقنع وموجز','Persuasive concise pitch'],
+['OKR','business','أهداف ونتائج','OKRs','أهداف قابلة للقياس','Measurable objectives'],
+['Meeting','business','محضر اجتماع','Meeting notes','قرارات ومهام ومواعيد','Decisions and action items'],
+['ImagePrompt','visual','وصف صورة','Image prompt','وصف دقيق لتوليد صورة','Detailed image generation prompt'],
+['Infographic','visual','إنفوجرافيك','Infographic','عرض معلومات بصري','Visual information layout'],
+['Logo','visual','فكرة شعار','Logo brief','هوية وشعار وألوان','Logo and identity brief'],
+['VideoScript','visual','سيناريو فيديو','Video script','مشاهد وصوت ومدد','Scenes, narration and timing'],
+['Podcast','visual','بودكاست','Podcast','فقرات وأسئلة وحوار','Segments and conversation'],
+['Diagram','visual','رسم توضيحي','Diagram','مكونات وعلاقات واضحة','Clear components and relationships'],
+['Slides','visual','تصميم شرائح','Slide design','هيكلة شرائح جذابة','Effective slide structure'],
+['Animation','visual','تصميم حركة','Animation concept','حركة ومشاهد وانتقالات','Motion and transitions'],
+['Coach','personal','مدرب شخصي','Coach','خطوات وعادات وتقييم','Practical coaching steps'],
+['Checklist','personal','قائمة تحقق','Checklist','بنود واضحة للتنفيذ','Actionable check items'],
+['Schedule','personal','جدول','Schedule','تنظيم الوقت والمهام','Time and tasks'],
+['Recipe','personal','وصفة','Recipe','مقادير وطريقة إعداد','Ingredients and method'],
+['Travel','personal','خطة رحلة','Travel plan','وجهات وأنشطة وترتيب','Destinations and activities'],
+['Interview','personal','مقابلة','Interview','أسئلة وتقييم الإجابات','Interview preparation'],
+['DecisionMatrix','personal','مصفوفة قرار','Decision matrix','تقييم خيارات بمعايير','Score alternatives by criteria'],
+['Habit','personal','بناء عادة','Habit plan','عادات صغيرة قابلة للقياس','Trackable habits'],
+['MicroStory','creative','قصة قصيرة جدًا','Micro fiction','قصة مكثفة في سطور','A compact complete story'],
+['PlotTwist','creative','مفاجأة سردية','Plot twist','نهاية تغير التوقعات','A surprising narrative turn'],
+['WorldBuilding','creative','بناء عالم','Worldbuilding','مكان وقوانين وثقافة','Setting, rules and culture'],
+['ChooseAdventure','creative','مغامرة اختيارية','Choose-your-adventure','قصة بمسارات وقرارات','Branching narrative'],
+['BedtimeStory','creative','قصة قبل النوم','Bedtime story','حكاية مطمئنة للأطفال','A calming story for children'],
+['Rhyme','creative','نص مقفّى','Rhyming text','قوافٍ سهلة وجذابة','Accessible rhymed writing'],
+['LearningPath','education','مسار تعلّم','Learning path','مستويات ومهارات ومعالم','Skills and milestones'],
+['CaseStudy','education','دراسة حالة','Case study','موقف واقعي وتحليل','Real-world scenario analysis'],
+['Socratic','education','حوار سقراطي','Socratic tutor','تعلّم عبر التساؤل','Learn through questions'],
+['ExitTicket','education','بطاقة خروج','Exit ticket','تقويم سريع في نهاية الدرس','Quick end-of-lesson check'],
+['Differentiation','education','تعليم متمايز','Differentiation','أنشطة لمستويات متعددة','Activities for different levels'],
+['ActiveRecall','education','استرجاع نشط','Active recall','أسئلة تذكّر دون تلميح','Retrieve knowledge from memory'],
+['SpacedReview','education','مراجعة متباعدة','Spaced review','جدول مراجعة على فترات','Revisit material over time'],
+['Misconceptions','education','تصحيح مفاهيم','Misconceptions','أخطاء شائعة وتصحيحها','Common errors and corrections'],
+['Pareto','analysis','تحليل 80/20','Pareto analysis','عوامل عالية الأثر','Highest-impact factors'],
+['RiskMatrix','analysis','مصفوفة مخاطر','Risk matrix','احتمال وتأثير وتخفيف','Likelihood, impact, mitigation'],
+['Scenario','analysis','تحليل سيناريوهات','Scenario planning','احتمالات وخيارات استجابة','Possible futures and responses'],
+['RootCause','analysis','تحليل سبب جذري','Root cause','أسباب وحلول جذرية','Underlying causes and fixes'],
+['Tradeoffs','analysis','المفاضلات','Tradeoffs','مكاسب وتنازلات واضحة','Benefits and sacrifices'],
+['MECE','analysis','تقسيم شامل','MECE breakdown','فئات دون تداخل قدر الإمكان','Mutually exclusive, collectively exhaustive'],
+['Steelman','analysis','أقوى حجة مضادة','Steelman','أفضل نسخة للرأي الآخر','Strongest opposing argument'],
+['ExecutiveSummary','writing','ملخص تنفيذي','Executive summary','نتائج وتوصيات للقارئ المشغول','Key outcomes for decision-makers'],
+['Newsletter','writing','نشرة بريدية','Newsletter','عناوين وفقرات وروابط','Email newsletter structure'],
+['PressRelease','writing','بيان صحفي','Press release','خبر بصياغة إعلامية','Media-ready announcement'],
+['ProductDescription','writing','وصف منتج','Product description','مزايا وفوائد بلغة مقنعة','Clear product benefits'],
+['CV','writing','سيرة ذاتية','Résumé','إنجازات وخبرات مرتبة','Concise career profile'],
+['CoverLetter','writing','خطاب تقديم','Cover letter','رسالة مخصصة لوظيفة','Tailored job application letter'],
+['Accessibility','coding','إتاحة رقمية','Accessibility review','فحص سهولة الوصول للجميع','Inclusive interface improvements'],
+['Algorithm','coding','خوارزمية','Algorithm','حل منطقي قابل للتنفيذ','Stepwise technical solution'],
+['API','coding','واجهة برمجية','API design','مسارات وطلبات واستجابات','Routes, requests and responses'],
+['Database','coding','قاعدة بيانات','Database schema','جداول وعلاقات وقيود','Entities and relationships'],
+['Regex','coding','تعبير نمطي','Regex','بحث ومطابقة النصوص','Text matching pattern'],
+['SecurityReview','coding','مراجعة أمان','Security review','مخاطر وإجراءات تخفيف','Security risk and mitigation'],
+['Documentation','coding','توثيق مشروع','Documentation','تعليمات استعمال وتشغيل','Project setup and usage'],
+['Migration','coding','ترحيل تقني','Migration plan','نقل آمن تدريجي','Safe stepwise migration'],
+['Hypothesis','research','فرضية بحث','Hypothesis','فرضية قابلة للاختبار','Testable research statement'],
+['Methodology','research','منهجية بحث','Methodology','عينة وأدوات وخطوات','Sample, instruments and procedure'],
+['InterviewQuestions','research','أسئلة مقابلة','Interview guide','أسئلة مفتوحة ممنهجة','Structured interview questions'],
+['Bibliography','research','قائمة مراجع','Bibliography','تنظيم مراجع قابلة للتحقق','Organize verifiable references'],
+['EvidenceMap','research','خريطة أدلة','Evidence map','توزيع الأدلة والفجوات','Evidence and research gaps'],
+['CustomerPersona','business','شخصية العميل','Customer persona','احتياجات ودوافع وعقبات','Needs, motivations, pain points'],
+['ValueProposition','business','قيمة مقترحة','Value proposition','سبب اختيار الخدمة','Why a product is valuable'],
+['LaunchPlan','business','خطة إطلاق','Launch plan','خطوات قبل الإطلاق وبعده','Launch phases and follow-up'],
+['Budget','business','ميزانية','Budget','بنود تكلفة وتقديرات','Cost categories and estimates'],
+['Negotiation','business','استراتيجية تفاوض','Negotiation','مواقف وبدائل وحلول','Positions, alternatives, options'],
+['UserJourney','visual','رحلة مستخدم','User journey','مراحل وتفاعل ونقاط احتكاك','Journey stages and friction'],
+['Wireframe','visual','مخطط واجهة','Wireframe','توزيع العناصر وظيفيًا','Page layout blueprint'],
+['ColorPalette','visual','لوحة ألوان','Color palette','ألوان متناسقة واستخداماتها','Coordinated colors and roles'],
+['Poster','visual','ملصق','Poster brief','عنوان ورسالة وتكوين','Poster content and composition'],
+['Thumbnail','visual','صورة مصغرة','Thumbnail concept','فكرة بصرية جاذبة','Attention-grabbing visual concept'],
+['Mindfulness','personal','تأمل بسيط','Mindfulness','تمرين انتباه وتنفس عام','Gentle reflective exercise'],
+['DailyPlan','personal','خطة يومية','Daily plan','أولويات ووقت للراحة','Priorities and breaks'],
+['GoalSetting','personal','صياغة هدف','Goal setting','هدف محدد قابل للمتابعة','Specific trackable goal'],
+['ReadingGuide','personal','دليل قراءة','Reading guide','أسئلة وملاحظات حول كتاب','Book discussion and notes']
+];
+const CATEGORIES=[['all','الكل','All'],['creative','القصص والإبداع','Creative'],['education','التعليم','Education'],['analysis','التحليل','Analysis'],['writing','الكتابة','Writing'],['coding','البرمجة','Coding'],['research','البحث','Research'],['business','الأعمال','Business'],['visual','المرئيات','Visual'],['personal','الحياة','Personal']];
+const MODIFIERS=[['Kids','للأطفال','For kids'],['Funny','فكاهي','Funny'],['Educational','تعليمي','Educational'],['Creative','إبداعي','Creative'],['Simple','مبسط','Simple'],['Expert','خبير','Expert'],['Saudi','أمثلة سعودية','Saudi context'],['Interactive','تفاعلي','Interactive'],['Visual','بصري','Visual'],['StepByStep','تدريجي','Step by step'],['Examples','أمثلة','Examples'],['Detailed','مفصل','Detailed'],['Short','مختصر','Short'],['Compare','قارن','Compare'],['Checklist','قائمة تحقق','Checklist'],['Verify','تحقق','Verify'],['Sources','مصادر','Sources'],['Questions','أسئلة','Questions'],['NoJargon','بلا مصطلحات معقدة','No jargon'],['Actionable','قابل للتنفيذ','Actionable'],['RTL','يمين لليسار','RTL'],['LTR','يسار لليمين','LTR'],['Bilingual','ثنائي اللغة','Bilingual'],['Beginner','للمبتدئين','Beginner'],['Advanced','متقدم','Advanced'],['Concise','دقيق وموجز','Concise'],['DataDriven','مبني على بيانات','Data-driven'],['Critique','نقد بنّاء','Critical review'],['Ethical','اعتبارات أخلاقية','Ethical'],['Accessible','سهل الوصول','Accessible'],['Iterative','تكراري','Iterative']];
+const TEMPLATES=[
+{labelAr:'قصة مصورة',labelEn:'Comic story',cmd:'Comic',ideaAr:'طفل فضولي يجد روبوتًا صغيرًا في الحديقة ويتعلم معه معنى الصداقة.',ideaEn:'A curious child finds a tiny robot in the garden and learns about friendship.',format:'storyboard',quantity:'6',mods:['Kids','Educational']},
+{labelAr:'درس تفاعلي',labelEn:'Interactive lesson',cmd:'Lesson',ideaAr:'علّم المبتدئ أساسيات البرمجة باستخدام أمثلة من حياته اليومية.',ideaEn:'Teach a beginner coding basics with everyday examples.',format:'steps',quantity:'auto',mods:['Interactive','Examples']},
+{labelAr:'تطبيق بسيط',labelEn:'Simple app',cmd:'App',ideaAr:'تطبيق تفاعلي عربي لتدريب الأطفال على جدول الضرب، مع نقاط ومستويات.',ideaEn:'An interactive multiplication practice app for kids with points and levels.',format:'code',quantity:'1',mods:['Interactive','Simple']},
+{labelAr:'بحث موثق',labelEn:'Sourced research',cmd:'Research',ideaAr:'ابحث في أثر الألعاب التعليمية على تحفيز الطلاب، مع بيان ما تؤيده الأدلة وما يحتاج تحققًا.',ideaEn:'Research how educational games affect motivation, distinguishing evidence from uncertainty.',format:'structured',quantity:'auto',mods:['Verify','Sources']},
+{labelAr:'اختبار تعليمي',labelEn:'Learning quiz',cmd:'Quiz',ideaAr:'أنشئ اختبارًا عن أساسيات الإنترنت والأمان الرقمي للمبتدئين.',ideaEn:'Create a beginner quiz on internet basics and digital safety.',format:'steps',quantity:'10',mods:['Educational','Questions']},
+{labelAr:'تحليل فكرة',labelEn:'Idea analysis',cmd:'SWOT',ideaAr:'حلّل فكرة مشروع منصة لتعليم البرمجة باللغة العربية للمتقاعدين.',ideaEn:'Evaluate an Arabic coding education platform for retirees.',format:'table',quantity:'auto',mods:['Compare','Verify']},
+{labelAr:'بناء قصة متفرعة',labelEn:'Branching story',cmd:'ChooseAdventure',ideaAr:'مغامرة في مكتبة قديمة يستطيع القارئ فيها اختيار طريق البطل.',ideaEn:'An adventure in an old library where readers choose the hero’s path.',format:'storyboard',quantity:'8',mods:['Interactive','Creative']},
+{labelAr:'تصميم واجهة',labelEn:'UI design',cmd:'UI',ideaAr:'واجهة لوحة تحكم عربية لإدارة الدروس والطلاب، تدعم الهواتف.',ideaEn:'A mobile-friendly Arabic dashboard for lessons and students.',format:'structured',quantity:'auto',mods:['RTL','Accessible']},
+{labelAr:'تخطيط مشروع',labelEn:'Project roadmap',cmd:'Roadmap',ideaAr:'أنشئ خطة ثلاثة أشهر لبناء موقع تعليمي ونشره للجمهور.',ideaEn:'Create a three-month roadmap to build and launch an educational website.',format:'steps',quantity:'auto',mods:['Actionable','Checklist']},
+{labelAr:'صياغة مقال',labelEn:'Article writing',cmd:'Article',ideaAr:'اكتب مقالًا مبسطًا عن كيف يساعد الذكاء الاصطناعي المعلم في ابتكار أنشطة صفية.',ideaEn:'Write an accessible article about how AI helps teachers develop classroom activities.',format:'structured',quantity:'auto',mods:['Simple','Examples']},
+{labelAr:'مراجعة أمنية',labelEn:'Security review',cmd:'SecurityReview',ideaAr:'راجع فكرة تطبيق ويب يستقبل ملفات المستخدمين وحدد أهم مخاطر الحماية.',ideaEn:'Review a web app that accepts user files and identify key security risks.',format:'table',quantity:'auto',mods:['Expert','Checklist']}
+];
+const I18N={
+ar:{localPrivate:'◉ إعداداتك محفوظة في متصفحك',eyebrow:'من الفكرة إلى الأمر الذكي',heroTitle:'فكرتك تستحق <em>أمرًا متقنًا.</em>',heroBody:'اختر ما تريد، أضف فكرتك، واضبط كل تفصيل. وسيط يحوّل اختصاراتك إلى برومبت متكامل وجاهز للاستخدام.',metricCommands:'أمر قابل للاختيار',metricCombinationsNumber:'∞',metricCombinations:'تركيبات بلا حدود',metricLanguages:'لغتان واتجاهان',metricPrivacy:'خصوصية أولًا',stepTask:'ما الذي تريد إنجازه؟',stepTaskSub:'ابدأ بأمر رئيسي، أو استخدم قالبًا جاهزًا.',quickTemplates:'قوالب سريعة',commandLibrary:'مكتبة الأوامر',stepIdea:'أضف الفكرة والمراجع',stepIdeaSub:'صف فكرتك بلغتك، وأضف ملفًا يدعم المهمة.',ideaLabel:'فكرتك أو المهمة المطلوبة <span class="required">*</span>',constraintsLabel:'شروط إضافية (اختياري)',exampleIdea:'أدخل مثالًا مناسبًا',dropTitle:'أسقط ملفاتك هنا أو اختر من الجهاز',dropSub:'النصوص تُقرأ محليًا، وملفات PDF والصور وWord تُذكر كمرفقات تحتاج لإضافتها مع البرومبت.',chooseFiles:'اختيار ملفات',includeFileText:'أدرج محتوى الملفات النصية داخل البرومبت',filesHint:'الملفات لا تُرفع إلى خادم؛ المعالجة تتم داخل المتصفح. إرفاق الاسم في البرومبت لا ينقل الملف إلى ChatGPT.',stepFineTune:'اضبط أسلوب الاستجابة',stepFineTuneSub:'تحكم في ما سيظهر في النتيجة وليس في مظهر الأداة فقط.',promptLanguage:'لغة البرومبت والنتيجة',audience:'الجمهور المستهدف',tone:'النبرة',depth:'مستوى التفصيل',outputFormat:'صيغة المخرجات',variants:'عدد النتائج / اللوحات',numerals:'شكل الأرقام في النتيجة',resultAlignment:'محاذاة النص الناتج',resultDirection:'اتجاه المحتوى الناتج',outputOrder:'ترتيب العناصر الناتجة',needExamples:'أضف أمثلة عملية',needQuestions:'اطرح أسئلة توضيحية إذا كانت المعلومات ناقصة',needSources:'اطلب مصادر موثوقة عند وجود حقائق',needChecklist:'أضف قائمة تحقق نهائية',modifiersLabel:'أوامر مساعدة — اختر ما يناسبك',stepAppearance:'تصميم واجهتك على ذوقك',stepAppearanceSub:'هذه الإعدادات تغيّر مظهر المولّد مباشرة.',uiDirection:'اتجاه الواجهة',cardOrder:'ترتيب بطاقات الأوامر',uiAlign:'محاذاة النص في الواجهة',cardDensity:'حجم البطاقات',livePreview:'معاينة مباشرة',resultTitle:'البرومبت النهائي',ready:'جاهز للنسخ',copyPrompt:'نسخ البرومبت',download:'تنزيل TXT',exportJson:'تصدير الإعدادات JSON',reset:'إعادة الضبط',resultNote:'انسخ البرومبت والصقه في ChatGPT. أرفق الملفات غير النصية معه يدويًا عند الحاجة.',myPresets:'قوالبي المحفوظة',saveCurrent:'+ حفظ الحالي',quote:'الأمر الجيد لا يختصر الكلمات فقط، بل يوضح المقصد ويقرب النتيجة.',footerTagline:'فكرتك، بصياغة أذكى.',saveDialogTitle:'اسم القالب الجديد',cancel:'إلغاء',save:'حفظ',searchPlaceholder:'ابحث عن أمر أو مهمة...',ideaPlaceholder:'مثال: قصة مصورة من 6 لوحات عن طفل يعلّم روبوتًا اللغة العربية...',constraintsPlaceholder:'مثل: تجنّب المصطلحات المعقدة، استخدم أمثلة سعودية...',emptySearch:'لم نجد أمرًا مطابقًا. جرّب كلمة أخرى.',selected:'الأمر المختار',noIdea:'اكتب فكرتك هنا ليتكوّن الأمر الكامل تلقائيًا.',chars:'حرف',words:'كلمة',fileText:'محتوى نصي متاح',fileRef:'يتطلب إرفاقه يدويًا',fileTooBig:'الملف كبير؛ سيُشار إليه بالاسم فقط',noPresets:'لم تحفظ أي قالب بعد.',presetSaved:'تم حفظ القالب',presetLoaded:'تم استرجاع القالب',removed:'تمت الإزالة',copied:'تم نسخ البرومبت',copyFailed:'تعذر النسخ التلقائي. حدّد النص وانسخه.',maxFiles:'يمكن إضافة 10 ملفات بحد أقصى.',saveFirst:'اكتب اسمًا للقالب',maxText:'أُدرج مقتطف من الملف لتجنب برومبت ضخم.'},
+en:{localPrivate:'◉ Settings stored in your browser',eyebrow:'FROM IDEA TO PROMPT',heroTitle:'Your idea deserves <em>a better prompt.</em>',heroBody:'Choose a task, add your idea, and fine-tune every detail. Wasit turns short commands into a complete, ready-to-use prompt.',metricCommands:'commands to explore',metricCombinationsNumber:'∞',metricCombinations:'possible combinations',metricLanguages:'languages & directions',metricPrivacy:'privacy by design',stepTask:'What would you like to create?',stepTaskSub:'Pick a main command or start from a template.',quickTemplates:'Quick templates',commandLibrary:'Command library',stepIdea:'Add your idea & sources',stepIdeaSub:'Describe the task and attach useful references.',ideaLabel:'Your idea or task <span class="required">*</span>',constraintsLabel:'Extra constraints (optional)',exampleIdea:'Insert a sample idea',dropTitle:'Drop files here or select from your device',dropSub:'Text files are read locally. PDFs, Word files and images are referenced by name and must be attached to ChatGPT separately.',chooseFiles:'Choose files',includeFileText:'Include text file contents in the prompt',filesHint:'Files stay in this browser. Naming a file in the prompt does not transfer it to ChatGPT.',stepFineTune:'Fine-tune the response',stepFineTuneSub:'These options affect the generated answer, not just the interface.',promptLanguage:'Prompt & result language',audience:'Target audience',tone:'Tone',depth:'Level of detail',outputFormat:'Output format',variants:'Number of items / panels',numerals:'Number style in output',resultAlignment:'Output text alignment',resultDirection:'Output direction',outputOrder:'Output item order',needExamples:'Include practical examples',needQuestions:'Ask clarifying questions if needed',needSources:'Request credible sources for factual claims',needChecklist:'Add a final checklist',modifiersLabel:'Extra command modifiers',stepAppearance:'Make the workspace yours',stepAppearanceSub:'These settings change the generator interface.',uiDirection:'Interface direction',cardOrder:'Command card order',uiAlign:'Interface text alignment',cardDensity:'Card size',livePreview:'LIVE PREVIEW',resultTitle:'Your final prompt',ready:'Ready to copy',copyPrompt:'Copy prompt',download:'Download TXT',exportJson:'Export settings JSON',reset:'Reset',resultNote:'Paste this prompt in ChatGPT. Attach non-text reference files manually alongside it.',myPresets:'Saved templates',saveCurrent:'+ Save current',quote:'A great prompt does more than save words; it clarifies the intent and improves the outcome.',footerTagline:'Your idea, thoughtfully prompted.',saveDialogTitle:'Name your template',cancel:'Cancel',save:'Save',searchPlaceholder:'Find a command or task...',ideaPlaceholder:'Example: a six-panel comic about a child teaching Arabic to a robot...',constraintsPlaceholder:'e.g. avoid jargon, include local examples...',emptySearch:'No matching command. Try another search.',selected:'Selected command',noIdea:'Write your idea here and the full prompt will build itself.',chars:'characters',words:'words',fileText:'text available',fileRef:'attach separately',fileTooBig:'file too large; name only',noPresets:'No saved templates yet.',presetSaved:'Template saved',presetLoaded:'Template loaded',removed:'Removed',copied:'Prompt copied',copyFailed:'Copy failed. Select the text and copy it.',maxFiles:'Maximum 10 files.',saveFirst:'Please name the template',maxText:'A text excerpt was included to limit prompt size.'}
+};
+Object.assign(I18N.ar,{newRequest:'طلب جديد',clearRequest:'مسح الطلب والبدء من جديد',cleared:'أصبح المولّد جاهزًا لطلب جديد مع الاحتفاظ بتفضيلاتك.',customCommand:'أو أدخل أمرًا خاصًا بك (اختياري)',customCommandPlaceholder:'مثال: /MySpecialTask',advancedTitle:'المحرك المتقدم للبرومبت',advancedSub:'خصص الدور والسياق والقيود وطريقة بناء البرومبت.',platformLabel:'المنصة المقصودة',promptModeLabel:'بنية البرومبت',sourcePolicyLabel:'التعامل مع المصادر',maxWordsLabel:'حد طول الاستجابة',personaLabel:'الدور أو الخبرة المطلوبة',personaPlaceholder:'مثال: خبير في تصميم مناهج تعليمية تفاعلية',contextLabel:'سياق إضافي أو معلومات خلفية',contextPlaceholder:'من المستفيد؟ ما الوضع الحالي؟',avoidLabel:'ما الذي يجب تجنبه؟',avoidPlaceholder:'مثال: لا تستخدم مصطلحات معقدة أو حشوًا',successLabel:'معايير نجاح النتيجة',successPlaceholder:'مثال: يعمل الكود مباشرة، ويوجد مثال لكل فكرة',creativityLabel:'درجة الإبداع المطلوبة',creativeConservative:'منضبط',creativeExploratory:'ابتكاري',reset:'إعادة ضبط جميع الإعدادات'});
+Object.assign(I18N.en,{newRequest:'New request',clearRequest:'Clear idea & start a new request',cleared:'Ready for a new request. Your preferences are preserved.',customCommand:'Or enter your own command (optional)',customCommandPlaceholder:'Example: /MySpecialTask',advancedTitle:'Advanced prompt engine',advancedSub:'Fine-tune the role, context, constraints, and prompt structure.',platformLabel:'Target AI platform',promptModeLabel:'Prompt structure',sourcePolicyLabel:'Source policy',maxWordsLabel:'Response length limit',personaLabel:'Assistant role or expertise',personaPlaceholder:'e.g. interactive curriculum design expert',contextLabel:'Additional context',contextPlaceholder:'Who benefits? What is the current situation?',avoidLabel:'Things to avoid',avoidPlaceholder:'e.g. jargon or unnecessary filler',successLabel:'Criteria for a successful result',successPlaceholder:'e.g. working code and a clear example for each idea',creativityLabel:'Creativity level',creativeConservative:'Precise',creativeExploratory:'Inventive',reset:'Reset all settings'});
+Object.assign(I18N.ar,{smartTitle:'إعدادات ذكية حسب المهمة',smartSub:'تتبدل حسب الأمر المختار، وتُحفظ تفاصيل كل مجال بصورة مستقلة.',characterTitle:'مكتبة الشخصيات الثابتة',characterChoose:'اختر شخصية محفوظة',characterSave:'حفظ الشخصية',characterLoad:'استدعاء',characterDelete:'حذف',characterExample:'✦ تعبئة مثال سالم',characterHelp:'تُستخدم ملامح الشخصية وملابسها نفسها في كل لوحة؛ يمكنك حفظها واستدعاءها لاحقًا.',characterNeedName:'اكتب اسم الشخصية أولًا.',characterSaved:'تم حفظ الشخصية محليًا.',characterLoaded:'تم استدعاء الشخصية.',characterDeleted:'تم حذف الشخصية.',characterSelect:'اختر شخصية أولًا.',qualityTitle:'مراجعة جودة البرومبت',qualityClean:'المعطيات متناسقة؛ راجع النتيجة قبل نسخها.',qualityFix:'إصلاح',qualityWarnings:'ملاحظات تحتاج انتباهًا',exportLibrary:'تصدير القوالب والشخصيات',importLibrary:'استيراد مكتبة',libraryImported:'اكتمل الاستيراد. أضيفت العناصر الجديدة دون استبدال الموجود.',libraryInvalid:'الملف ليس مكتبة «وسيط» صالحة.',libraryTooLarge:'ملف المكتبة كبير جدًا.',libraryEmpty:'لا توجد قوالب أو شخصيات لاستيرادها.',offlineMode:'وضع محلي آمن',executionLater:'يصوغ البرومبت ويدققه دون إرسال بياناتك. التنفيذ الآلي إضافة اختيارية لاحقًا.'});
+Object.assign(I18N.en,{smartTitle:'Task-aware settings',smartSub:'Fields adapt to your selected command; details are kept separately per domain.',characterTitle:'Reusable character library',characterChoose:'Choose a saved character',characterSave:'Save character',characterLoad:'Load',characterDelete:'Delete',characterExample:'✦ Fill Salem example',characterHelp:'Keep the same face, outfit and identity across panels. Save and reuse character profiles.',characterNeedName:'Enter a character name first.',characterSaved:'Character saved locally.',characterLoaded:'Character loaded.',characterDeleted:'Character removed.',characterSelect:'Choose a character first.',qualityTitle:'Prompt quality review',qualityClean:'Your settings are consistent. Review the result before copying.',qualityFix:'Fix',qualityWarnings:'Items to review',exportLibrary:'Export templates & characters',importLibrary:'Import library',libraryImported:'Import complete. New items were added without replacing existing ones.',libraryInvalid:'Not a valid Wasit library file.',libraryTooLarge:'Library file is too large.',libraryEmpty:'Nothing new to import.',offlineMode:'Private local mode',executionLater:'Builds and checks prompts without sending data. Direct AI execution is a future optional addition.'});
+Object.assign(I18N.ar,{productTitle:'المنتج الرقمي النهائي',productSub:'يوجه البرومبت المساعد الذكي لإنشاء ملفات قابلة للاستخدام، وفق نوع الأمر.',productFormat:'صيغة المنتج المطلوبة',productFileName:'اسم المنتج (اختياري)',productFilePlaceholder:'مثال: الاشكال-الهندسية',productEditable:'اطلب نسخة قابلة للتعديل أو ملف المصدر، متى أمكن',productSuggestion:'المنتج المقترح لهذا الأمر',productDisclosure:'وسيط يجهز البرومبت ولا يولّد الملفات بنفسه. إنشاء المنتج يعتمد على قدرات المساعد الذكي الذي تستخدمه.',resultNote:'انسخ البرومبت والصقه في مساعد ذكي يدعم إنشاء الملفات؛ سيطلب منه المنتج النهائي، وأرفق ملفاتك المرجعية يدويًا عند الحاجة.',executionLater:'يجهز البرومبت ويوضح المنتج الرقمي المطلوب. إنشاء المنتج الفعلي يتم لدى المساعد الذكي الذي تستخدمه.',heroBody:'اختر أمرًا، صف فكرتك، واحصل على برومبت يتضمن تكليفًا واضحًا بإنجاز منتج رقمي نهائي جاهز للاستخدام.'});
+Object.assign(I18N.en,{productTitle:'Final digital product',productSub:'The prompt tells the AI to create useful downloadable files appropriate to each command.',productFormat:'Requested file format',productFileName:'Product filename (optional)',productFilePlaceholder:'e.g. geometric-shapes',productEditable:'Request an editable version or source files when possible',productSuggestion:'Suggested product for this command',productDisclosure:'Wasit creates the prompt, not the files. Actual file generation depends on the AI assistant you use.',resultNote:'Paste this prompt into an AI assistant with file-generation tools. Attach any referenced non-text files separately.',executionLater:'Prepares prompts with concrete final-file requirements; the AI assistant you choose creates those files.',heroBody:'Pick a command, describe your idea, and get a prompt that requests a complete, usable digital product.'});
+Object.assign(I18N.ar,{footerTitle:'تذييل التوثيق الخارجي',footerSub:'اسم المعلم أو المدرسة في هامش مستقل أسفل العمل، دون أن يصبح جزءًا من محتواه.',footerEnable:'إضافة تذييل توثيق اختياري إلى المنتج النهائي',footerTextLabel:'نص التذييل — يُكتب كما هو',footerPlaceholder:'إعداد: أ. ... | المدرسة: ... | العام الدراسي: ...',footerAlignLabel:'محاذاة التذييل',footerScopeLabel:'موضعه في الأعمال متعددة الصفحات',footerSizeLabel:'حجم خط التذييل',footerSeparatorLabel:'إظهار خط فاصل رفيع أعلى التذييل',footerMockContent:'مساحة العمل الأصلية — دون تذييل',footerMockCaption:'الهامش الخارجي السفلي المنفصل',footerNote:'المعاينة توضح الموضع فقط؛ يطلب البرومبت وضع التذييل في حيز مستقل داخل الملف المُصدَّر.'});
+Object.assign(I18N.en,{footerTitle:'External documentation footer',footerSub:'Credit the teacher or school in a separate bottom margin, outside the main work.',footerEnable:'Add an optional documentation footer to the finished product',footerTextLabel:'Footer text — reproduce exactly',footerPlaceholder:'Prepared by: ... | School: ... | Academic year: ...',footerAlignLabel:'Footer alignment',footerScopeLabel:'On multi-page products',footerSizeLabel:'Footer text size',footerSeparatorLabel:'Add a thin separator line above the footer',footerMockContent:'Original work area — no footer inside',footerMockCaption:'Separate bottom outer margin',footerNote:'This is a placement preview. The prompt requests the footer inside a separate area of the exported file.'});
+const OPTIONS={
+promptLang:[['ar','العربية','Arabic'],['en','English','English'],['both','العربية والإنجليزية','Arabic and English']],
+audience:[['general','عام','General'],['kids','أطفال','Children'],['beginners','مبتدئون','Beginners'],['students','طلاب','Students'],['teachers','معلمون','Teachers'],['professionals','متخصصون','Professionals']],
+tone:[['friendly','ودودة وواضحة','Friendly and clear'],['formal','رسمية','Formal'],['creative','إبداعية','Creative'],['humorous','مرحة','Humorous'],['academic','أكاديمية','Academic'],['persuasive','إقناعية','Persuasive']],
+depth:[['balanced','متوازن','Balanced'],['brief','مختصر','Brief'],['deep','مفصل','Detailed'],['step','خطوة بخطوة','Step by step']],
+format:[['structured','فقرات بعناوين','Headed sections'],['table','جدول','Table'],['bullets','نقاط','Bullet points'],['steps','خطوات مرقمة','Numbered steps'],['json','JSON','JSON'],['dialogue','حوار','Dialogue'],['storyboard','لوحات ومشاهد','Scenes and panels'],['code','كود قابل للتجربة','Runnable code']],
+quantity:[['auto','تلقائي','Automatic'],...['1','3','4','6','8','10','12'].map(x=>[x,x,x])],
+numerals:[['western','0 1 2 3','0 1 2 3'],['arabic','٠ ١ ٢ ٣','٠ ١ ٢ ٣']],
+resultAlign:[['natural','حسب اللغة','Language default'],['right','يمين','Right'],['left','يسار','Left'],['center','وسط','Center']],
+resultDir:[['auto','حسب اللغة','Language default'],['rtl','يمين ← يسار','Right to left'],['ltr','يسار ← يمين','Left to right']],
+outputOrder:[['logical','ترتيب طبيعي','Natural order'],['rtl','يمين ← يسار','Right to left'],['ltr','يسار ← يمين','Left to right']],
+uiDir:[['rtl','عربي — يمين إلى يسار','RTL (Arabic-style)'],['ltr','English — left to right','LTR (English-style)']],
+cardOrder:[['rtl','يمين ← يسار','Right to left'],['ltr','يسار ← يمين','Left to right'],['reverse','عكس الترتيب','Reverse list']],
+uiAlign:[['start','بداية السطر','Start'],['center','وسط','Center'],['end','نهاية السطر','End']],
+density:[['comfortable','مريح','Comfortable'],['compact','مدمج','Compact']],
+platform:[['general','أي مساعد ذكي','Any AI assistant'],['chatgpt','ChatGPT','ChatGPT'],['claude','Claude','Claude'],['gemini','Gemini','Gemini'],['copilot','Copilot','Copilot']],
+promptMode:[['structured','منظم بعناوين','Headed sections'],['compact','موجز','Compact'],['xml','وسوم XML','XML sections'],['json','JSON','JSON']],
+sourcePolicy:[['balanced','تحقق عند الضرورة','Verify when needed'],['strict','توثيق صارم','Strict sourcing'],['creative','حرية إبداعية','Creative freedom']],
+maxWords:[['auto','بدون حد محدد','No set limit'],...['100','250','500','1000','2000'].map(x=>[x,x+' كلمة',x+' words'])]
+ ,artifactFormat:[['auto','تلقائي حسب الأمر','Automatic for each command'],['png','PNG — صورة','PNG — image'],['pdf','PDF — مستند','PDF — document'],['docx','DOCX — Word','DOCX — Word'],['pptx','PPTX — PowerPoint','PPTX — PowerPoint'],['xlsx','XLSX — Excel','XLSX — Excel'],['html','HTML — تفاعلي','HTML — interactive'],['svg','SVG — رسم متجهي','SVG — vector'],['zip','ZIP — ملفات المشروع','ZIP — project files'],['mp3','MP3 — صوت','MP3 — audio'],['mp4','MP4 — فيديو','MP4 — video'],['csv','CSV — بيانات','CSV — data'],['json','JSON — بيانات','JSON — data'],['md','MD — Markdown','MD — Markdown']],
+footerAlign:[['right','يمين','Right'],['center','وسط','Center'],['left','يسار','Left']],
+footerScope:[['all','أسفل كل صفحة','Bottom of every page'],['last','الصفحة الأخيرة فقط','Final page only']],
+footerSize:[['small','صغير وهادئ','Small and understated'],['medium','متوسط','Medium']]
+};
+const FIELD_IDS=['idea','constraints','customCommand','context','persona','avoid','successCriteria','promptLang','audience','tone','depth','format','quantity','numerals','resultAlign','resultDir','outputOrder','platform','promptMode','sourcePolicy','maxWords','creativity','needExamples','needQuestions','needSources','needChecklist','uiDir','cardOrder','uiAlign','density','includeFileText','artifactFormat','artifactName','includeEditable','footerEnabled','footerText','footerAlign','footerScope','footerSize','footerSeparator'];
+const DEFAULT={locale:'ar',command:'Comic',category:'all',search:'',idea:'',constraints:'',customCommand:'',persona:'',context:'',avoid:'',successCriteria:'',platform:'general',promptMode:'structured',sourcePolicy:'balanced',maxWords:'auto',creativity:'50',promptLang:'ar',audience:'general',tone:'friendly',depth:'balanced',format:'storyboard',quantity:'6',numerals:'western',resultAlign:'natural',resultDir:'auto',outputOrder:'logical',needExamples:true,needQuestions:true,needSources:false,needChecklist:false,uiDir:'rtl',cardOrder:'rtl',uiAlign:'start',density:'comfortable',includeFileText:true,artifactFormat:'auto',artifactName:'',includeEditable:true,footerEnabled:false,footerText:'',footerAlign:'center',footerScope:'all',footerSize:'small',footerSeparator:false,modifiers:['Educational'],dark:false,specialized:{}};
+// Digital-product profiles are independent of the text-response layout setting.
+// Every catalog command gets a concrete product profile, with task-specific overrides.
+const PRODUCT_PROFILES={
+ document:{files:['PDF','DOCX'],editable:['DOCX'],ar:'وثيقة منسقة مكتملة وجاهزة للاستخدام',en:'Complete, formatted document ready to use',arGuide:'أنشئ المستند بمحتواه النهائي وعناوينه وتنسيقه؛ لا تكتف بخطة لإنشائه.',enGuide:'Write and format the complete document, not a plan or outline.'},
+ story:{files:['PDF','DOCX'],editable:['DOCX'],ar:'قصة مكتملة بصفحات مرتبة وغلاف مناسب',en:'Complete story with readable pages and suitable cover',arGuide:'أنشئ القصة بنصها الكامل وفصولها أو مشاهدها المناسبة، مع غلاف بصري إذا توفرت أدوات الصور.',enGuide:'Deliver the full story in readable pages, with a cover image if image tools are available.'},
+ comic:{files:['PNG','PDF'],editable:['DOCX'],ar:'لوحات قصة مصورة فعلية وملف قراءة جاهز',en:'Illustrated comic panels and a complete reading file',arGuide:'أنشئ الرسوم الفعلية للوحات، والحوار العربي المقروء، واجمعها في صفحة أو صفحات PDF. ثبّت وجوه الشخصيات وأزياءها بين جميع اللوحات؛ لا تسلّم وصف اللوحات وحده.',enGuide:'Actually create the illustrated panels and legible dialogue, compile a PDF, and preserve character design across every panel. Do not stop at panel descriptions.'},
+ infographic:{files:['PNG','PDF'],editable:['SVG'],ar:'إنفوجرافيك بصري مكتمل وجاهز للمشاركة والطباعة',en:'Finished infographic for sharing and printing',arGuide:'صمّم إنفوجرافيك مرئيًا حقيقيًا من المعلومات، بعناوين وعناصر بصرية ونص واضح؛ احرص على الدقة وقابلية القراءة.',enGuide:'Design the actual visual infographic with accurate content, hierarchy, graphics and legible text.'},
+ image:{files:['PNG'],editable:['SVG'],ar:'تصميم أو صورة نهائية قابلة للمشاركة',en:'Finished image or design ready to share',arGuide:'ولّد الصورة أو التصميم النهائي فعليًا؛ لا تتوقف عند وصف الصورة أو برومبت إضافي.',enGuide:'Generate the actual final image or design; do not return only another image prompt.'},
+ palette:{files:['HTML','PNG'],editable:['HTML'],ar:'لوحة ألوان مرئية مع أكواد الألوان',en:'Visual color palette with color codes',arGuide:'اعرض عينات الألوان وأكوادها وتوظيفها داخل لوحة بصرية قابلة للاستخدام.',enGuide:'Render the swatches, codes and usage guidance as a usable visual palette.'},
+ diagram:{files:['SVG','PDF'],editable:['SVG'],ar:'رسم توضيحي واضح قابل للتكبير والطباعة',en:'Scalable diagram suitable for printing',arGuide:'ارسم العلاقات والعناصر في مخطط فعلي واضح، لا قائمة تصف المخطط.',enGuide:'Create an actual coherent diagram, not a list describing it.'},
+ quiz:{files:['HTML','PDF'],editable:['HTML'],ar:'اختبار تفاعلي يعمل مع نسخة للطباعة والإجابات',en:'Working interactive quiz and printable answer key',arGuide:'ابن اختبارًا تفاعليًا يعمل بالمتصفح مع الإجابات والتصحيح والتغذية الراجعة، وأضف نسخة PDF للطباعة.',enGuide:'Build a working browser quiz with answers, scoring and feedback, plus a printable PDF.'},
+ flashcards:{files:['HTML','PDF'],editable:['HTML'],ar:'بطاقات تفاعلية ونسخة قابلة للطباعة',en:'Interactive flashcards and printable cards',arGuide:'اصنع بطاقات وجه وظهر قابلة للتقليب رقميًا مع تنسيق مناسب للطباعة.',enGuide:'Produce genuinely flippable cards and a printable front/back layout.'},
+ survey:{files:['HTML','PDF'],editable:['HTML'],ar:'استبيان قابل للتعبئة ونسخة للطباعة',en:'Fillable survey and printable questionnaire',arGuide:'أنشئ نموذج استبيان قابلًا للتعبئة، بأسئلة واضحة ومنظمة، ونسخة مطبوعة.',enGuide:'Create a fillable, clearly organized survey and printable version.'},
+ checklist:{files:['HTML','PDF'],editable:['HTML'],ar:'قائمة تحقق تفاعلية ونسخة للطباعة',en:'Interactive checklist and printable copy',arGuide:'أنشئ قائمة بنود قابلة للتأشير إلكترونيًا، مع نسخة للطباعة.',enGuide:'Build checkable items in a usable interface and provide a printable version.'},
+ presentation:{files:['PPTX','PDF'],editable:['PPTX'],ar:'عرض شرائح مكتمل بصريًا وقابل للتقديم',en:'Fully designed presentation deck',arGuide:'صمّم الشرائح فعليًا بعناوين وعناصر بصرية مناسبة، وأضف ملاحظات متحدث عند الحاجة.',enGuide:'Create the actual designed slides, with speaker notes where useful.'},
+ spreadsheet:{files:['XLSX','PDF'],editable:['XLSX'],ar:'جدول بيانات منظّم بصيغ وتحليلات قابلة للاستخدام',en:'Usable spreadsheet with tables and formulas',arGuide:'أنشئ جداول البيانات والصيغ والتحليلات المطلوبة، مع ملخص واضح يمكن طباعته.',enGuide:'Create functional tables, formulas and analysis with a printable summary.'},
+ webapp:{files:['HTML','ZIP'],editable:['HTML','ZIP'],ar:'منتج تفاعلي قابل للتشغيل مع ملفات المصدر',en:'Runnable interactive product with source files',arGuide:'ابنِ التطبيق أو اللعبة كاملًا وقابلًا للتشغيل، مع واجهة وعناصر تفاعل وتجربة فعلية؛ لا تكتفِ بالتصميم النظري.',enGuide:'Implement a complete runnable app or game with working interactions, not a conceptual mockup.'},
+ code:{files:['ZIP'],editable:['ZIP'],ar:'ملفات مصدر قابلة للتشغيل والاختبار',en:'Testable source-code deliverable',arGuide:'قدّم الملفات البرمجية كاملة مع README واختبار مناسب وأوامر التشغيل، ووثّق ما اختبرته بالفعل.',enGuide:'Deliver complete source files, setup instructions and tests; distinguish verified results from assumptions.'},
+ codeAudit:{files:['PDF','MD'],editable:['MD'],ar:'تقرير فني عملي مع تعديلات مقترحة قابلة للتطبيق',en:'Actionable technical report and proposed patches',arGuide:'أنشئ تقريرًا مرتبًا بالأدلة ودرجة الأولوية، وأرفق التصحيحات الفعلية عندما تتوافر ملفات المصدر.',enGuide:'Deliver a prioritized evidence-based report and real patches when source files are provided.'},
+ social:{files:['PNG','TXT'],editable:['TXT'],ar:'منشور مصمم مع نص جاهز للنشر',en:'Shareable social design and publication copy',arGuide:'اصنع تصميم المنشور والنص المناسب للمنصة، مع فصل النص القابل للنسخ.',enGuide:'Create the post artwork and publish-ready text, separately copyable.'},
+ email:{files:['HTML','PDF'],editable:['HTML'],ar:'رسالة مصممة وجاهزة للإرسال أو النسخ',en:'Ready-to-send email content and layout',arGuide:'أنشئ الرسالة كاملة بعنوانها ومتنها وتنسيقها القابل للنسخ أو الإرسال.',enGuide:'Deliver the complete subject, body and usable email layout.'},
+ videoScript:{files:['PDF'],editable:['DOCX'],ar:'ملف سيناريو تصوير ومشاهد جاهز للإنتاج',en:'Production-ready shooting script',arGuide:'أنشئ سيناريو التصوير النهائي بمشاهد ومدد وحوار وتعليقات صوتية وتعليمات إنتاج.',enGuide:'Deliver a complete shooting script with scenes, timing, narration and production notes.'},
+ audio:{files:['MP3'],editable:['DOCX'],ar:'حلقة صوتية كاملة مع نص قابل للتحرير',en:'Finished audio episode with editable script',arGuide:'أنتج الملف الصوتي النهائي إن توفرت أدوات الصوت، مع النص الكامل للحلقة.',enGuide:'Generate the finished audio with audio tools when available, alongside the full transcript.'},
+ animation:{files:['MP4'],editable:['DOCX'],ar:'فيديو متحرك نهائي مع ملف وصف المشاهد',en:'Finished animated video and production storyboard',arGuide:'أنشئ فيديو الحركة النهائي إن توفرت أدوات الفيديو، مع نص ومشاهد إنتاج موثقة.',enGuide:'Generate the finished animation if video tools are available, with the production storyboard.'}
+};
+const PRODUCT_COMMAND_GROUPS={
+ story:'Story Novel MicroStory BedtimeStory PlotTwist Rhyme Poem Script Dialogue',
+ comic:'Comic Manga Storyboard',
+ infographic:'Infographic',
+ image:'ImagePrompt Logo Poster Thumbnail',
+ palette:'ColorPalette',
+ diagram:'Mindmap Diagram UserJourney Wireframe EvidenceMap Timeline',
+ quiz:'Quiz MCQ ExitTicket ActiveRecall',
+ flashcards:'Flashcards SpacedReview',
+ survey:'Survey',
+ checklist:'Checklist',
+ presentation:'Presentation Slides Pitch',
+ spreadsheet:'DataAnalysis Budget Schedule DecisionMatrix RiskMatrix OKR Habit DailyPlan Rubric',
+ webapp:'App Game UI Prototype ChooseAdventure',
+ code:'Code Debug Refactor Algorithm TestCases API Database Regex Documentation',
+ codeAudit:'CodeReview Accessibility SecurityReview',
+ social:'SocialPost',
+ email:'Email Newsletter',
+ videoScript:'VideoScript',
+ audio:'Podcast',
+ animation:'Animation'
+};
+const PRODUCT_BY_COMMAND=Object.fromEntries(CATALOG.map(c=>[c[0],'document']));
+for(const [group,commands] of Object.entries(PRODUCT_COMMAND_GROUPS))for(const command of commands.split(' '))PRODUCT_BY_COMMAND[command]=group;
+function productSpec(){
+ const custom=Boolean(state.customCommand.trim());
+ const group=custom?'document':PRODUCT_BY_COMMAND[state.command]||'document';
+ const profile=PRODUCT_PROFILES[group];
+ let files=[...profile.files];
+ if(group==='comic'&&state.artifactFormat==='auto'){
+  const choice=state.specialized.comic?.delivery;
+  if(choice==='panels')files=['PDF'];
+  else if(choice==='image')files=['PNG','PDF'];
+ }
+ if(state.artifactFormat!=='auto'&&OPTIONS.artifactFormat.some(o=>o[0]===state.artifactFormat))files=[state.artifactFormat.toUpperCase()];
+ const editable=state.includeEditable?profile.editable.filter(ext=>!files.includes(ext)):[];
+ const preferredName=state.artifactName.trim().replace(/[\\/:*?"<>|\u0000-\u001f]/g,'-').replace(/^\.+/,'').slice(0,80);
+ return {group,profile,files,editable,name:preferredName||'wasit-product'};
+}
+function productText(english){
+ const p=productSpec(),exts=p.files.join(' + '),source=p.editable.join(' + ');
+ const storyboardOnly=p.group==='comic'&&state.artifactFormat==='auto'&&state.specialized.comic?.delivery==='panels';
+ const productionGuide=storyboardOnly?(english?'Create a finished, designed PDF storyboard with all panels, visual descriptions, dialogue and stable character reference sheets; this choice does not request rendered illustrated PNG panels.':'أنشئ ملف PDF نهائيًا منسقًا للوحات السيناريو، يضم تكوين كل لوحة والحوار ومرجعًا ثابتًا للشخصيات؛ لا يتطلب هذا الخيار صور PNG مرسومة.'):(english?p.profile.enGuide:p.profile.arGuide);
+ const lines=english?[
+  'The required outcome has TWO parts: the complete final digital product and a brief handoff explaining the delivered files. This text itself is the production prompt; do not answer by composing another prompt.',
+  `Required downloadable file format(s): ${exts}. Suggested base filename: ${p.name}.`,
+  productionGuide,
+  'Use your available creation tools to make REAL files and provide working download links/attachments after successful creation. Ensure files contain the finished content, are readable, and match the audience and language settings.',
+  ...(source?[`Also supply editable/source version(s) where technically appropriate: ${source}.`]:[]),
+  'If a tool or requested export format is unavailable, say exactly which file you could not generate. Provide the closest complete usable alternative (for example, a runnable HTML or valid SVG source) and clear save/export instructions. Label it as an alternative, not as the requested file. Never invent download links, files, images, citations, or claims of testing.'
+ ]:[
+  'المطلوب نتيجتان مترابطتان: المنتج الرقمي النهائي مكتمل المحتوى، ثم تسليم موجز يوضح الملفات وكيفية استخدامها. هذا النص هو البرومبت التنفيذي؛ لا تكتفِ بإعداد برومبت جديد أو وصف المنتج.',
+  `صيغ الملفات النهائية المطلوبة والقابلة للتنزيل: ${exts}. اسم الملف الأساسي المقترح: ${p.name}.`,
+  productionGuide,
+  'استخدم أدوات الإنشاء المتاحة لديك لإنتاج ملفات حقيقية مكتملة المحتوى، ثم قدّم روابط تنزيل أو مرفقات تعمل بعد إنشائها فعليًا. تحقق من وضوحها ومناسبتها للجمهور واللغة.',
+  ...(source?[`قدّم أيضًا نسخة قابلة للتعديل أو ملف مصدر عند ملاءمته تقنيًا: ${source}.`]:[]),
+  'إذا لم تتوفر أداة أو تعذّر تصدير صيغة مطلوبة، فاذكر الملف الذي لم تستطع إنتاجه بصراحة. قدّم أقرب بديل مكتمل قابل للاستخدام (مثل HTML يعمل أو مصدر SVG صالح) مع طريقة حفظه وتصديره، وسمّه بديلًا ولا تدّعِ أنه الملف المطلوب. لا تختلق روابط تنزيل أو صورًا أو ملفات أو اختبارات.'
+ ];
+ return `${english?'FINAL DIGITAL PRODUCT — REQUIRED DELIVERABLE':'المنتج الرقمي النهائي — تكليف إلزامي'}\n- ${lines.join('\n- ')}`;
+}
+function documentationFooterText(english){
+ if(!state.footerEnabled||!state.footerText.trim())return '';
+ const align=optionName('footerAlign',state.footerAlign,english?'en':'ar');
+ const scope=optionName('footerScope',state.footerScope,english?'en':'ar');
+ const size=state.footerSize==='medium'?(english?'medium (11–13 pt)':'متوسط (١١–١٣ نقطة)'):(english?'small (9–11 pt)':'صغير (٩–١١ نقطة)');
+ const text=state.footerText.trim();
+ if(english)return `SEPARATE EXTERNAL DOCUMENTATION FOOTER — OPTIONAL CREDIT, NOT MAIN CONTENT\n- Exact footer text (preserve spelling and line breaks; do not rewrite or translate):\n<<<FOOTER_TEXT>>>\n${text}\n<<<END_FOOTER_TEXT>>>\n- Position: in a dedicated bottom OUTER margin/band, following and visually separated from the complete main work. Alignment: ${align}. Text size: ${size}. Placement on multi-page work: ${scope}. Separator: ${state.footerSeparator?'a subtle thin line above the footer':'no separator line'}.\n- For PNG/SVG/comics/posters, reserve additional bottom export space outside the original art/panels. For PDFs/DOCX/slides, use the document/page/slide footer zone outside the body layout. For HTML, use a separate <footer> after <main>, including print styling. Never place this credit inside illustrations, dialogue balloons, quiz questions, data visualizations, or as a watermark.\n- For outputs without a visual page (such as MP3, ZIP or raw data), place this text on a separate printable/documentation cover or companion credit file; do not inject it into the audio, code, or data. Keep the requested digital product complete and unchanged.`;
+ return `تذييل توثيق خارجي مستقل — ليس جزءًا من محتوى العمل\n- نص التذييل حرفيًا (حافظ على حروفه والأسطر كما كتبها المستخدم، ولا تعِد صياغته أو ترجمته):\n<<<نص_التذييل>>>\n${text}\n<<<نهاية_التذييل>>>\n- الموضع: هامش أو شريط سفلي خارجي مخصص، يأتي بعد اكتمال العمل ويفصله عنه فراغ بصري واضح. المحاذاة: ${align}. حجم الخط: ${size}. التكرار في الأعمال متعددة الصفحات: ${scope}. الخط الفاصل: ${state.footerSeparator?'خط رفيع هادئ فوق التذييل':'دون خط فاصل'}.\n- في الصور والإنفوجرافيك والقصص المصورة: خصص مساحة إضافية أسفل اللوحة الأصلية ضمن التصدير النهائي، من دون تغطية الرسم أو اقتصاصه. في PDF وWord والشرائح: استخدم منطقة تذييل الصفحة خارج المتن والتصميم الأساسي. في HTML: استخدم عنصر تذييل مستقلًا بعد المحتوى الرئيسي مع تنسيق للطباعة. لا تضع التذييل داخل المشاهد أو فقاعات الحوار أو أسئلة الاختبار أو الرسومات أو كعلامة مائية.\n- للمنتجات غير المرئية التي لا تحتوي صفحة (مثل MP3 أو ZIP أو البيانات الخام): ضع التوثيق في صفحة غلاف أو ملف اعتماد مرافق مستقل قابل للطباعة، ولا تُدخله في الصوت أو الكود أو البيانات. احفظ المنتج الأصلي كاملًا دون تغيير.`;
+}
+// Task schemas are separate from the catalog: adding fields does not change existing commands.
+const SMART_GROUPS={
+ comic:{ar:'القصص المصورة',en:'Comic & storyboarding',fields:[
+  ['heroName','اسم البطل','Character name','text','مثال: سالم','e.g. Salem'],
+  ['heroIdentity','الملامح والهوية البصرية','Face & visual identity','textarea','العمر، لون البشرة، الشعر، العينان، شكل الوجه','Age, hair, eyes, face and skin tone',true],
+  ['heroOutfit','الملابس الثابتة','Consistent outfit','textarea','الثوب، الحذاء، الألوان','Outfit, shoes and colors',true],
+  ['heroAccessories','الإكسسوارات الثابتة','Consistent accessories','text','الحقيبة، النظارة...','Backpack, glasses...'],
+  ['targetGrade','الفئة العمرية أو الصف','Age group or school grade','text','الصف الثالث الابتدائي','Grade 3'],
+  ['visualStyle','الأسلوب البصري','Visual style','select',[['cartoon','كرتوني ثنائي الأبعاد','2D cartoon'],['watercolor','ألوان مائية','Watercolor'],['manga','مانغا','Manga'],['clean','رسوم تعليمية مبسطة','Clean educational art']]],
+  ['storyArc','بداية القصة وتطورها ونهايتها','Story beginning, middle and ending','textarea','اكتشاف أول، تحدٍ صغير، خاتمة مشوقة','Discovery, small challenge, memorable ending',true],
+  ['delivery','المخرج المقصود','Desired deliverable','select',[['panels','سيناريو مفصل للوحات','Detailed storyboard'],['image','صفحة مصورة نهائية','Finished comic image'],['both','صورة وسيناريو معًا','Image and storyboard']]]
+ ]},
+ education:{ar:'التعليم والتقويم',en:'Teaching & assessment',fields:[
+  ['grade','الصف أو المرحلة الدراسية','Grade or level','text','الصف الثالث الابتدائي','Grade 3'],
+  ['subject','المادة الدراسية','Subject','text','رياضيات، علوم، لغة عربية...','Math, science, language...'],
+  ['duration','المدة المتاحة','Available duration','text','٤٥ دقيقة','45 minutes'],
+  ['objectives','نواتج التعلم القابلة للقياس','Measurable learning outcomes','textarea','ما الذي سيتمكن الطالب من فعله؟','What should students be able to do?',true],
+  ['activities','الأنشطة والتمايز','Activities & differentiation','textarea','أنشطة عملية للطلاب باختلاف مستوياتهم','Hands-on activities for different levels',true],
+  ['assessment','التقويم والتغذية الراجعة','Assessment & feedback','textarea','سؤال ختامي ومؤشرات النجاح','Exit ticket and success criteria',true]
+ ]},
+ research:{ar:'البحث والتحليل',en:'Research & analysis',fields:[
+  ['scope','حدود الموضوع','Research scope','text','المكان، الفترة، الفئة','Location, period, population'],
+  ['question','السؤال البحثي','Research question','textarea','ما السؤال الذي تريد الإجابة عنه؟','What question should be answered?',true],
+  ['evidence','نوع الأدلة المطلوبة','Evidence requirements','select',[['primary','مصادر أولية موثوقة','Reliable primary sources'],['mixed','مصادر أولية وثانوية','Primary and secondary sources'],['provided','تحليل المراجع المرفقة فقط','Only supplied references']]],
+  ['method','المنهج أو طريقة التحليل','Method or analysis approach','text','مقارنة، مراجعة أدبيات، تحليل بيانات','Comparison, review, data analysis'],
+  ['limitations','الحدود والشكوك','Limitations & uncertainty','textarea','حدّد ما لا يمكن إثباته','State what cannot be established',true]
+ ]},
+ coding:{ar:'البرمجة والتطبيقات',en:'Coding & applications',fields:[
+  ['target','البيئة أو الجهاز المستهدف','Target platform','text','متصفح، هاتف، سطح المكتب','Browser, mobile, desktop'],
+  ['stack','اللغات والتقنيات المفضلة','Preferred stack','text','HTML وCSS وJavaScript','HTML, CSS and JavaScript'],
+  ['features','الوظائف الأساسية المطلوبة','Required features','textarea','حدد ما يجب أن يفعله التطبيق','List essential behavior',true],
+  ['constraints','قيود التشغيل','Runtime constraints','textarea','دون خادم، يعمل دون اتصال، إلخ','Offline, serverless, etc.',true],
+  ['tests','معايير القبول والاختبار','Acceptance tests','textarea','حالات اختبار قابلة للتحقق','Verifiable test cases',true]
+ ]},
+ visual:{ar:'التصميم والوسائط',en:'Visual design & media',fields:[
+  ['subject','موضوع التصميم','Design subject','text','منتج، شخصية، رسم بياني...','Product, character, diagram...'],
+  ['style','الأسلوب والهوية','Style & identity','text','الألوان، الإضاءة، الخامات','Colors, lighting, texture'],
+  ['composition','التكوين والمقاس','Composition & size','text','مربع، أفقي، رأسي','Square, landscape, portrait'],
+  ['visibleText','النص الظاهر بالحرف','Exact visible text','textarea','النصوص التي ينبغي أن تظهر على التصميم','Exact copy to appear on the design',true]
+ ]},
+ general:{ar:'تفاصيل إضافية',en:'Additional details',fields:[
+  ['deliverable','الناتج النهائي المرغوب','Final deliverable','text','ملخص، مسودة، خطة تنفيذ...','Summary, draft, plan...'],
+  ['measure','كيف تقيس نجاح المهمة؟','How to measure success','textarea','معايير محددة قابلة للتحقق','Specific verifiable criteria',true]
+ ]}
+};
+function taskGroup(){const cmd=state.command;if(state.customCommand.trim())return 'general';if(['Comic','Manga','Storyboard'].includes(cmd))return 'comic';const category=activeCommand()[1];if(category==='education')return 'education';if(category==='coding')return 'coding';if(category==='research'||category==='analysis')return 'research';if(category==='visual')return 'visual';return 'general'}
+function cleanSpecialized(source){const result={};if(!source||typeof source!=='object'||Array.isArray(source))return result;for(const [group,def] of Object.entries(SMART_GROUPS)){const vals=source[group];if(!vals||typeof vals!=='object'||Array.isArray(vals))continue;const clean={};for(const field of def.fields){const v=vals[field[0]];if(typeof v==='string')clean[field[0]]=v.slice(0,2000)}result[group]=clean}return result}
+function safeJson(key,fallback){try{const result=JSON.parse(localStorage.getItem(key));return result&&typeof result==='object'?result:fallback}catch{return fallback}}
+function freshDefaults(){return {...DEFAULT,modifiers:[...DEFAULT.modifiers],specialized:{}}}
+// Validate persisted settings before a saved string reaches a renderer or prompt builder.
+let state={...freshDefaults(),...normalizeSnapshot(safeJson('wasit-state-v1',{}))};
+let saved=Array.isArray(safeJson('wasit-presets-v1',[]))?safeJson('wasit-presets-v1',[]):[];
+function cleanCharacter(p){if(!p||typeof p!=='object'||Array.isArray(p))return null;const name=typeof p.name==='string'?p.name.trim().slice(0,80):'';if(!name)return null;const details={};for(const k of ['heroIdentity','heroOutfit','heroAccessories','visualStyle'])details[k]=typeof p[k]==='string'?p[k].slice(0,2000):'';return {id:typeof p.id==='string'?p.id.slice(0,100):String(Date.now()),name,...details}}
+let characters=(Array.isArray(safeJson('wasit-characters-v1',[]))?safeJson('wasit-characters-v1',[]):[]).map(cleanCharacter).filter(Boolean).slice(0,60);
+let files=[];let toastTimer=null;let latestPrompt='';
+const tr=k=>I18N[state.locale][k]||k;
+const label=(ar,en)=>state.locale==='ar'?ar:en;
+const escapeHtml=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const digits=s=>state.numerals==='arabic'?String(s).replace(/[0-9]/g,ch=>'٠١٢٣٤٥٦٧٨٩'[+ch]):String(s);
+const optionName=(id,val,lang=state.locale)=>(OPTIONS[id]||[]).find(o=>o[0]===val)?.[lang==='ar'?1:2]||val;
+const activeCommand=()=>CATALOG.find(x=>x[0]===state.command)||CATALOG[0];
+const stripMarkup=s=>String(s).replace(/<[^>]*>/g,'');
+function smartText(ar,en){return state.locale==='ar'?ar:en}
+function smartValues(){const group=taskGroup();return state.specialized[group]||{}}
+function renderSpecialized(){
+ const group=taskGroup(),schema=SMART_GROUPS[group],values=smartValues();
+ $('smartIntro').textContent=smartText(`مجال الإعدادات: ${schema.ar}. لن تظهر تفاصيل المجالات الأخرى في البرومبت الحالي.`,`Settings: ${schema.en}. Fields from other domains will not appear in this prompt.`);
+ $('specializedFields').innerHTML=schema.fields.map(([key,ar,en,type,arg1,arg2,wide])=>{
+  const id=`smart-${key}`,value=values[key]||'',caption=escapeHtml(smartText(ar,en));let control='';
+  if(type==='select'){const options=[['',smartText('اختر…','Choose…'),smartText('اختر…','Choose…')],...arg1];control=`<select id="${id}" data-special-key="${key}">${options.map(o=>`<option value="${escapeHtml(o[0])}" ${value===o[0]?'selected':''}>${escapeHtml(smartText(o[1],o[2]))}</option>`).join('')}</select>`}
+  else if(type==='textarea')control=`<textarea id="${id}" data-special-key="${key}" rows="2" placeholder="${escapeHtml(smartText(arg1,arg2))}">${escapeHtml(value)}</textarea>`;
+  else control=`<input id="${id}" data-special-key="${key}" type="text" maxlength="700" value="${escapeHtml(value)}" placeholder="${escapeHtml(smartText(arg1,arg2))}">`;
+  return `<label class="smart-field ${wide?'wide':''}" for="${id}"><span>${caption}</span>${control}</label>`
+ }).join('');
+ $('characterTools').hidden=group!=='comic';if(group==='comic')renderCharacters();
+}
+function renderCharacters(){
+ const options=characters.map(p=>`<option value="${escapeHtml(p.id)}">${escapeHtml(p.name)}</option>`).join('');
+ $('characterTools').innerHTML=`<div class="character-tools-head"><span>♙ ${escapeHtml(tr('characterTitle'))}</span><span>${digits(characters.length)}</span></div><div class="character-actions"><select class="character-select" id="characterSelect" aria-label="${escapeHtml(tr('characterChoose'))}"><option value="">${escapeHtml(tr('characterChoose'))}</option>${options}</select><button type="button" class="secondary-btn" data-character-action="load">${escapeHtml(tr('characterLoad'))}</button><button type="button" class="ghost-btn" data-character-action="delete">${escapeHtml(tr('characterDelete'))}</button></div><div class="smart-examples"><button type="button" class="mini-primary" data-character-action="save">＋ ${escapeHtml(tr('characterSave'))}</button><button type="button" class="mini-primary" data-character-action="example">${escapeHtml(tr('characterExample'))}</button></div><p class="smart-helper">${escapeHtml(tr('characterHelp'))}</p>`;
+}
+function saveCharacters(){try{localStorage.setItem('wasit-characters-v1',JSON.stringify(characters))}catch{}}
+function characterAction(action){
+ const charFields=['heroName','heroIdentity','heroOutfit','heroAccessories','visualStyle'];
+ if(action==='example'){
+  state.specialized.comic={...smartValues(),heroName:'سالم',heroIdentity:'طفل سعودي عمره ٩ سنوات، وجه مستدير، بشرة قمحية فاتحة، شعر أسود قصير ومسرّح إلى الجانب، عينان بنيتان.',heroOutfit:'ثوب سعودي أبيض طويل بياقة وأزرار، حذاء رياضي أبيض.',heroAccessories:'حقيبة ظهر خضراء صغيرة بحمالتين.',visualStyle:'cartoon',targetGrade:'الصف الثالث الابتدائي'};
+  persist();renderSpecialized();renderPrompt();return;
+ }
+ if(action==='save'){
+  const v=smartValues(),name=(v.heroName||'').trim();if(!name){setToast(tr('characterNeedName'));return}
+  const item=cleanCharacter({id:String(Date.now())+'-'+Math.random().toString(36).slice(2,7),name,heroIdentity:v.heroIdentity||'',heroOutfit:v.heroOutfit||'',heroAccessories:v.heroAccessories||'',visualStyle:v.visualStyle||''});
+  const idx=characters.findIndex(p=>p.name.toLocaleLowerCase()===name.toLocaleLowerCase());if(idx>=0)item.id=characters[idx].id;
+  if(idx>=0)characters[idx]=item;else characters.unshift(item);characters=characters.slice(0,60);saveCharacters();renderCharacters();setToast(tr('characterSaved'));return;
+ }
+ const id=$('characterSelect')?.value,idx=characters.findIndex(p=>p.id===id);if(idx<0){setToast(tr('characterSelect'));return}
+ if(action==='load'){
+  const p=characters[idx];state.specialized.comic={...smartValues(),heroName:p.name,heroIdentity:p.heroIdentity,heroOutfit:p.heroOutfit,heroAccessories:p.heroAccessories,visualStyle:p.visualStyle};persist();renderSpecialized();renderPrompt();setToast(tr('characterLoaded'));
+ }else if(action==='delete'&&confirm(smartText(`حذف الشخصية «${characters[idx].name}» من هذه المكتبة؟`,`Delete “${characters[idx].name}” from this library?`))){characters.splice(idx,1);saveCharacters();renderCharacters();setToast(tr('characterDeleted'))}
+}
+function taskSpecificText(english){const group=taskGroup(),def=SMART_GROUPS[group],vals=smartValues();const lines=def.fields.filter(f=>typeof vals[f[0]]==='string'&&vals[f[0]].trim()).map(f=>{
+ let v=vals[f[0]];if(f[3]==='select'){const option=f[4].find(o=>o[0]===v);v=option?option[english?2:1]:v}return `- ${english?f[2]:f[1]}: ${v.trim()}`});
+ if(group==='comic')lines.push(english?'- Character continuity: repeat exactly the same face, age, hair, clothing and accessories in all panels. Keep a coherent beginning, middle and ending.':'- ثبات الشخصية: حافظ على العمر والوجه والشعر والملابس والإكسسوارات نفسها في جميع اللوحات، مع بداية وتطور ونهاية مترابطة.');
+ if(group==='education')lines.push(english?'- Pedagogical check: match vocabulary and difficulty to the grade; include measurable outcomes and age-appropriate feedback.':'- تحقق تربوي: اضبط المفردات والصعوبة بحسب الصف، واجعل الأهداف قابلة للقياس والتغذية الراجعة مناسبة للعمر.');
+ if(group==='research')lines.push(english?'- Evidence check: distinguish sourced facts from inferences and acknowledge uncertainty.':'- التحقق من الأدلة: ميّز بين الحقائق الموثقة والاستنتاجات واذكر مواطن عدم اليقين.');
+ if(group==='coding')lines.push(english?'- Delivery check: provide runnable code and tests tied to the acceptance criteria.':'- تحقق برمجي: قدم كودًا قابلًا للتشغيل واختبارات مرتبطة بمعايير القبول.');
+ return lines.length?`${english?'TASK-SPECIFIC DETAILS':'تفاصيل خاصة بنوع المهمة'}\n${lines.join('\n')}`:'';
+}
+function auditPrompt(){const issues=[],group=taskGroup(),v=smartValues(),arabic=state.locale==='ar';
+ const add=(id,ar,en,fix='')=>issues.push({id,text:arabic?ar:en,fix});
+ if(!state.idea.trim())add('idea','اكتب الفكرة أو المهمة قبل الاستخدام.','Write your idea or task before using the prompt.');
+ else if(state.idea.trim().length<15)add('short','الفكرة قصيرة جدًا؛ أضف الهدف أو السياق المتوقع.','The idea is very short; add a goal or context.');
+ if(group==='comic'&&!v.heroName?.trim())add('hero','لم تحدد اسم البطل؛ قد يصعب الحفاظ على شخصيته.','No hero name: character consistency may be harder.');
+ if(group==='comic'&&v.heroName?.trim()&&(!v.heroIdentity?.trim()||!v.heroOutfit?.trim()))add('identity','أضف ملامح البطل وملابسه لتقوية ثباته بين اللوحات.','Add the hero’s appearance and outfit to improve consistency.');
+ if(group==='comic'&&state.quantity==='auto')add('panels','حدّد عدد اللوحات للقصة المصورة.','Set a panel count for the comic.');
+ if(group==='comic'&&v.targetGrade?.trim()&&state.audience==='general')add('audience','حددت صفًا دراسيًا لكن الجمهور ما زال عامًا.','You set a grade but the audience is still general.','audience');
+ if(group==='education'&&v.grade?.trim()&&state.audience==='general')add('audience','حددت صفًا دراسيًا لكن الجمهور ما زال عامًا.','You set a grade but the audience is still general.','audience');
+ if(state.artifactFormat==='mp3'&&productSpec().group!=='audio')add('product','اخترت ملفًا صوتيًا لأمر لا ينتج صوتًا عادةً؛ تأكد أنه مقصود.','MP3 is unusual for this command; confirm that audio is intended.');
+ if(state.artifactFormat==='mp4'&&productSpec().group!=='animation')add('product','اخترت ملف فيديو لأمر لا ينتج فيديو عادةً؛ تأكد أنه مقصود.','MP4 is unusual for this command; confirm that video is intended.');
+ if(state.footerEnabled&&!state.footerText.trim())add('footer','فعّلت تذييل التوثيق ولم تكتب نصه بعد.','The documentation footer is enabled but the footer text is empty.');
+ if(state.avoid.trim()&&/^(ركز|احرص|حافظ|أضف|اجعل|استخدم|يجب|ينبغي|keep|ensure|include|use|focus)/i.test(state.avoid.trim()))add('avoid','تبدو خانة «ما يجب تجنبه» تعليمات إيجابية. انقلها إلى الشروط.','The “Avoid” field looks like a positive requirement. Move it into constraints.','move-avoid');
+ if(files.some(f=>!f.content))add('files','بعض الملفات مذكورة بالاسم فقط؛ أرفقها يدويًا مع البرومبت.','Some files are referenced by name only; attach them to your AI request.');
+ return issues;
+}
+function renderQuality(){const issues=auditPrompt();$('qualityTitle').textContent=tr('qualityTitle');$('qualityCount').textContent=issues.length?`${digits(issues.length)} ${tr('qualityWarnings')}`:smartText('✓ جيد','✓ Good');$('qualityCount').classList.toggle('quality-count',!!issues.length);
+ $('qualityList').innerHTML=issues.length?issues.map(i=>`<div class="quality-item"><span>⚑ ${escapeHtml(i.text)}</span>${i.fix?`<button type="button" data-quality-fix="${i.fix}">${escapeHtml(tr('qualityFix'))}</button>`:''}</div>`).join(''):`<div class="quality-ok">✓ ${escapeHtml(tr('qualityClean'))}</div>`;
+}
+function applyQualityFix(fix){if(fix==='audience')state.audience='students';else if(fix==='move-avoid'){state.constraints=[state.constraints.trim(),state.avoid.trim()].filter(Boolean).join('\n');state.avoid=''}persist();syncFields();renderPrompt()}
+function setToast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2600)}
+function persist(){const savedState={...state};delete savedState.search;delete savedState.category;try{localStorage.setItem('wasit-state-v1',JSON.stringify(savedState))}catch{}}
+function syncFields(){for(const id of FIELD_IDS){const el=$(id);if(el){if(el.type==='checkbox')el.checked=Boolean(state[id]);else el.value=state[id]??''}}$('searchCommands').value=state.search||'';$('themeToggle').textContent=state.dark?'☀':'☾';$('creativityValue').textContent=digits(state.creativity)+'%'}
+function renderLocale(){document.documentElement.lang=state.locale;document.title=state.locale==='ar'?'وسيط ٢.٣ | تحسين الثبات واستعادة الإعدادات':'Wasit 2.3 | Stable Prompt Studio';document.querySelectorAll('[data-i18n]').forEach(el=>{el.innerHTML=tr(el.dataset.i18n)});document.querySelectorAll('[data-placeholder]').forEach(el=>{el.placeholder=tr(el.dataset.placeholder)});$('languageToggle').textContent=state.locale==='ar'?'EN':'عربي';for(const [id,values]of Object.entries(OPTIONS)){const el=$(id);if(!el)continue;const old=el.value;el.replaceChildren(...values.map(([value,ar,en])=>{const op=document.createElement('option');op.value=value;op.textContent=label(ar,en);return op}));el.value=old||state[id]}
+}
+function renderProductPreview(){const p=productSpec();const primary=p.files.join(' + ');const editable=p.editable.length?(state.locale==='ar'?' · ملفات المصدر: ':' · Editable source: ')+p.editable.join(' + '):'';$('artifactPreview').textContent=`${p.profile[state.locale]} — ${primary}${editable}`;$('artifactPreviewHelp').textContent=state.locale==='ar'?'سيطلب البرومبت إنشاء هذه الملفات لدى المساعد الذكي. يمكنك تغيير الصيغة أعلاه.':'The prompt asks your AI assistant to create these files. You can override the format above.'}
+function renderFooterPreview(){
+ $('footerOptions').hidden=!state.footerEnabled;
+ const band=$('footerMockBand');
+ band.textContent=state.footerText.trim()||(state.locale==='ar'?'سيظهر نص التذييل هنا':'Your footer text will appear here');
+ band.style.textAlign=['right','center','left'].includes(state.footerAlign)?state.footerAlign:'center';
+ band.dir='auto';
+ band.classList.toggle('has-rule',Boolean(state.footerSeparator));
+ band.classList.toggle('medium',state.footerSize==='medium');
+}
+function renderCategories(){const box=$('categories');box.innerHTML=CATEGORIES.map(([key,ar,en])=>`<button type="button" role="tab" aria-selected="${state.category===key}" class="category ${state.category===key?'active':''}" data-category="${key}">${escapeHtml(label(ar,en))}</button>`).join('')}
+function renderCommands(){let list=CATALOG.filter(cmd=>(state.category==='all'||cmd[1]===state.category)&&(!state.search||[cmd[0],cmd[2],cmd[3],cmd[4],cmd[5]].join(' ').toLocaleLowerCase().includes(state.search.toLocaleLowerCase())));if(state.cardOrder==='reverse')list=[...list].reverse();$('commandGrid').innerHTML=list.length?list.map(c=>`<button type="button" class="command-card ${state.command===c[0]?'selected':''}" data-command="${c[0]}" aria-pressed="${state.command===c[0]}"><span class="cmd-code">/${escapeHtml(c[0])}</span><span class="cmd-name">${escapeHtml(label(c[2],c[3]))}</span><span class="cmd-desc">${escapeHtml(label(c[4],c[5]))}</span></button>`).join(''):`<div class="empty-search">${tr('emptySearch')}</div>`;
+const c=activeCommand();$('selectedCommandInfo').innerHTML=`<span>✦ ${tr('selected')}</span><code>/${escapeHtml(c[0])}</code><span>— ${escapeHtml(label(c[4],c[5]))}</span>`}
+function renderTemplates(){const box=$('templates');box.innerHTML=TEMPLATES.map((t,i)=>`<button class="template-chip" data-template="${i}" type="button">✦ ${escapeHtml(label(t.labelAr,t.labelEn))}</button>`).join('')}
+function renderModifiers(){$('modifierGrid').innerHTML=MODIFIERS.map(m=>`<button class="modifier-btn ${state.modifiers.includes(m[0])?'selected':''}" data-modifier="${m[0]}" aria-pressed="${state.modifiers.includes(m[0])}" type="button">/${m[0]} · ${escapeHtml(label(m[1],m[2]))}</button>`).join('')}
+function applyAppearance(){document.documentElement.dir=state.uiDir;document.documentElement.style.setProperty('--ui-dir',state.uiDir);document.documentElement.style.setProperty('--cards-dir',state.cardOrder==='ltr'?'ltr':state.cardOrder==='rtl'?'rtl':state.uiDir);document.documentElement.style.setProperty('--ui-text-align',state.uiAlign);document.documentElement.style.setProperty('--card-padding',state.density==='compact'?'9px':'17px');document.body.classList.toggle('dark',state.dark);$('resultPaper').style.direction=state.resultDir==='auto'?(state.promptLang==='en'?'ltr':'rtl'):state.resultDir;$('resultPaper').style.textAlign=state.resultAlign==='natural'?(state.promptLang==='en'?'left':'right'):state.resultAlign;$('appearancePreview').querySelectorAll('.fake-card').forEach(el=>el.style.direction=state.uiDir)}
+function renderFiles(){$('fileList').innerHTML=files.map((f,i)=>`<div class="file-item"><div class="file-icon">${escapeHtml(f.ext||'FILE')}</div><div class="file-info"><strong title="${escapeHtml(f.name)}">${escapeHtml(f.name)}</strong><small>${digits((f.size/1024).toFixed(0))} KB · ${f.content?tr('fileText'):f.tooBig?tr('fileTooBig'):tr('fileRef')}</small></div><button type="button" class="file-remove" data-remove-file="${i}" aria-label="Remove ${escapeHtml(f.name)}">×</button></div>`).join('')}
+function renderSaved(){$('savedPresets').innerHTML=saved.length?saved.map((p,i)=>`<div class="saved-item"><button type="button" class="saved-name" data-load-preset="${i}">✦ ${escapeHtml(p.name)}</button><button type="button" class="saved-remove" data-delete-preset="${i}" aria-label="Remove">×</button></div>`).join(''):`<div class="saved-empty">${tr('noPresets')}</div>`}
+function buildPrompt(){
+ const c=activeCommand();const english=state.promptLang==='en';const both=state.promptLang==='both';const mainLang=english?'English':'العربية';
+ const customized=state.customCommand.trim().replace(/^\/+/,'').replace(/\s+/g,'_');
+ const taskName=customized||(english?c[3]:c[2]);const command=`/${customized||c[0]}`;const mods=state.modifiers.map(x=>`/${x}`).join(' ');
+ const parts=[];
+ if(english){
+   parts.push(`ROLE\n${state.persona.trim()||`You are a skilled assistant specialized in ${taskName.toLowerCase()}.`} Translate the user's idea into a high-quality, practical result.`);
+   parts.push(`TASK\nPrimary command: ${command}${mods?' '+mods:''}\nTask type: ${customized?'Custom task — interpret the command in the context of the idea.':c[3]+' — '+c[5]+'.'}`);
+   parts.push(`IDEA / GOAL\n${state.idea.trim()||'Describe the desired task here.'}`);
+   if(state.constraints.trim())parts.push(`ADDITIONAL CONSTRAINTS\n${state.constraints.trim()}`);
+   if(state.context.trim())parts.push(`BACKGROUND / CONTEXT\n${state.context.trim()}`);
+   if(state.avoid.trim())parts.push(`AVOID\n${state.avoid.trim()}`);
+   if(state.successCriteria.trim())parts.push(`SUCCESS CRITERIA\n${state.successCriteria.trim()}`);
+ }else{
+   parts.push(`الدور\n${state.persona.trim()||`أنت مساعد خبير في ${taskName}.`} حوّل فكرة المستخدم إلى نتيجة عملية متقنة، مع مراعاة الجمهور والقيود.`);
+   parts.push(`المهمة\nالأمر الرئيسي: ${command}${mods?' '+mods:''}\nنوع المهمة: ${customized?'مهمة خاصة؛ فسّر الأمر وفق الفكرة والسياق.':c[2]+' — '+c[4]+'.'}`);
+   parts.push(`الفكرة أو الهدف\n${state.idea.trim()||'اكتب الفكرة المطلوبة هنا.'}`);
+   if(state.constraints.trim())parts.push(`شروط خاصة\n${state.constraints.trim()}`);
+   if(state.context.trim())parts.push(`سياق ومعلومات خلفية\n${state.context.trim()}`);
+   if(state.avoid.trim())parts.push(`أشياء يجب تجنبها\n${state.avoid.trim()}`);
+   if(state.successCriteria.trim())parts.push(`معايير نجاح النتيجة\n${state.successCriteria.trim()}`);
+ }
+ const specializedText=taskSpecificText(english);if(specializedText)parts.push(specializedText);
+ if(files.length){const fileLines=files.map(f=>{let item=`- ${f.name} (${(f.size/1024).toFixed(0)} KB)`;if(f.content&&state.includeFileText)item+=english?' — text provided below':' — محتواه النصي مضمّن أدناه';else item+=english?' — attach the actual file to the same ChatGPT message; filename alone is not the content.':' — أرفق الملف الأصلي مع الرسالة في ChatGPT؛ ذكر اسمه لا ينقل محتواه.';return item});parts.push(`${english?'REFERENCE FILES':'ملفات مرجعية'}\n${fileLines.join('\n')}`);if(state.includeFileText){let budget=28000;const texts=[];for(const f of files){if(!f.content||budget<=0)continue;const clipped=f.content.slice(0,Math.min(12000,budget));budget-=clipped.length;texts.push(`--- ${f.name} ---\n${clipped}${clipped.length<f.content.length?'\n[... excerpt truncated ...]':''}`)}if(texts.length)parts.push(`${english?'TEXT REFERENCE CONTENT':'محتوى المراجع النصية'}\n${texts.join('\n\n')}`)}}
+ const settings=english?[
+  `Language: ${both?'Arabic and English (present both versions)':mainLang}.`,`Audience: ${optionName('audience',state.audience,'en')}.`,`Tone: ${optionName('tone',state.tone,'en')}.`,`Detail: ${optionName('depth',state.depth,'en')}.`,`Output format: ${optionName('format',state.format,'en')}.`,state.quantity==='auto'?'Choose a suitable number of items.':`Number of items/panels: ${state.quantity}.`,`Numerals: ${state.numerals==='arabic'?'Arabic-Indic digits (٠١٢٣٤٥٦٧٨٩)':'Western digits (0123456789)'}.`,`Text direction: ${optionName('resultDir',state.resultDir,'en')}.`,`Text alignment: ${optionName('resultAlign',state.resultAlign,'en')}.`,`Ordering for cards/elements: ${optionName('outputOrder',state.outputOrder,'en')}.`,`Target assistant: ${optionName('platform',state.platform,'en')}.`,state.maxWords==='auto'?'Use the length needed for a complete answer.':`Aim for at most ${state.maxWords} words unless that would make the result unusable.`,`Creativity: ${state.creativity}/100 (${+state.creativity<35?'precise and conservative':+state.creativity>65?'exploratory and inventive':'balanced'}).`
+ ]:[
+  `اللغة: ${both?'العربية والإنجليزية مع تقديم النسختين':'العربية الفصحى الواضحة'}.`,`الجمهور: ${optionName('audience',state.audience,'ar')}.`,`النبرة: ${optionName('tone',state.tone,'ar')}.`,`التفصيل: ${optionName('depth',state.depth,'ar')}.`,`شكل الإخراج: ${optionName('format',state.format,'ar')}.`,state.quantity==='auto'?'اختر عدد العناصر المناسب للموضوع.':`العدد المطلوب من العناصر أو اللوحات: ${state.quantity}.`,`الأرقام: ${state.numerals==='arabic'?'الأرقام العربية الهندية (٠١٢٣٤٥٦٧٨٩)':'الأرقام الغربية (0123456789)'}.`,`اتجاه النص: ${optionName('resultDir',state.resultDir,'ar')}.`,`المحاذاة: ${optionName('resultAlign',state.resultAlign,'ar')}.`,`ترتيب البطاقات والعناصر: ${optionName('outputOrder',state.outputOrder,'ar')}.`,`المنصة: ${optionName('platform',state.platform,'ar')}.`,state.maxWords==='auto'?'اختر الطول اللازم لإجابة مكتملة.':`اجعل الاستجابة في حدود ${state.maxWords} كلمة ما لم يُخل ذلك باكتمال العمل.`,`درجة الإبداع: ${state.creativity} من 100 (${+state.creativity<35?'منضبط ودقيق':+state.creativity>65?'منفتح على البدائل والابتكار':'متوازن'}).`
+ ];
+ parts.push(`${english?'OUTPUT SETTINGS':'إعدادات المخرجات'}\n${settings.map(x=>'- '+x).join('\n')}`);
+ parts.push(productText(english));
+ const documentationFooter=documentationFooterText(english);if(documentationFooter)parts.push(documentationFooter);
+ const rules=[];
+ if(c[0]==='Comic'||c[0]==='Manga'||c[0]==='Storyboard')rules.push(english?'For each panel, describe the visuals, action, dialogue, and any on-image text. Keep characters consistent.':'لكل لوحة، اذكر الوصف البصري والحركة والحوار والنص الظاهر، مع الحفاظ على ثبات الشخصيات.');
+ if(c[0]==='App'||c[0]==='Game'||c[0]==='Code'||c[0]==='Prototype'||c[0]==='UI')rules.push(english?'When code is requested, provide a working implementation, setup instructions and a simple verification path.':'عند طلب الكود، قدم تنفيذًا عمليًا مع تعليمات التشغيل وطريقة اختبار واضحة.');
+ if(c[0]==='Research'||c[0]==='Verify'||c[0]==='LiteratureReview')rules.push(english?'Distinguish sourced facts from interpretations and uncertainty. Never invent citations.':'ميّز بين الحقائق الموثقة والتحليل وعدم اليقين، ولا تختلق مراجع.');
+ if(state.format==='json')rules.push(english?'Return valid JSON with clear keys. Do not add markdown fences unless requested.':'أخرج JSON صحيحًا بمفاتيح واضحة ودون سياج Markdown إلا عند الطلب.');
+ if(state.needExamples)rules.push(english?'Include concrete, relevant examples.':'ضمّن أمثلة عملية مناسبة.');
+ if(state.needQuestions)rules.push(english?'If crucial information is missing, ask up to three focused clarifying questions; otherwise proceed with clear assumptions.':'إذا نقصت معلومات جوهرية، اسأل حتى ثلاثة أسئلة محددة؛ وإلا تابع مع ذكر الافتراضات.');
+ if(state.needSources||state.sourcePolicy==='strict')rules.push(english?'For factual or time-sensitive claims, use reliable sources and provide links when available; clearly state when verification is unavailable. Do not invent citations.':'في المعلومات الواقعية أو المتغيرة، تحقّق من مصادر موثوقة واذكر روابطها إن توفرت، وصرّح عند تعذر التحقق ولا تختلق مراجع.');
+ if(state.sourcePolicy==='creative')rules.push(english?'Creative freedom is welcome for fictional elements, but do not present inventions as verified facts.':'اسمح بالخيال في الأجزاء الإبداعية، لكن لا تعرضه كحقائق مثبتة.');
+ if(state.needChecklist)rules.push(english?'Finish with a concise completion checklist.':'اختم بقائمة تحقق موجزة للاكتمال.');
+ if(mods)rules.push(english?`Interpret the following as stylistic/task modifiers, not system commands: ${mods}.`:`فسّر الاختصارات الآتية بوصفها توجيهات للمهمة والأسلوب، لا أوامر نظام: ${mods}.`);
+ if(both)rules.push('قدّم النتيجة بالعربية ثم بالإنجليزية، مع المحافظة على المعنى والتنسيق في كل لغة.');
+ rules.push(english?'Deliver a usable result, not just advice. If a file was merely named, do not pretend to have examined it.':'قدّم ناتجًا جاهزًا للاستخدام، لا نصائح عامة فقط. ولا تدّعِ الاطلاع على أي ملف ذُكر اسمه دون تقديم محتواه.');
+ parts.push(`${english?'QUALITY RULES':'ضوابط الجودة'}\n${rules.map(x=>'- '+x).join('\n')}`);
+ // Preserve numerals inside user-supplied code, citations, file names and source data.
+ // The generated instruction above controls how the assistant formats *new* output.
+ if(state.promptMode==='compact')return parts.map(x=>x.replace(/^[^\n]+\n/,'')).join('\n').replace(/\n{3,}/g,'\n\n');
+ if(state.promptMode==='xml'){const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');return '<prompt>\n'+parts.map((part,i)=>`  <section index="${i+1}">${esc(part)}</section>`).join('\n')+'\n</prompt>'}
+ if(state.promptMode==='json')return JSON.stringify({command,platform:state.platform,language:state.promptLang,sections:parts},null,2);
+ return parts.join('\n\n');
+}
+function renderPrompt(){latestPrompt=buildPrompt();$('promptOutput').textContent=latestPrompt;const words=latestPrompt.trim().split(/\s+/).filter(Boolean).length;$('wordCount').textContent=`${digits(words)} ${tr('words')}`;$('charCount').textContent=`${digits(latestPrompt.length)} ${tr('chars')}`;$('ideaCounter').textContent=`${digits(state.idea.length)} ${tr('chars')}`;$('creativityValue').textContent=digits(state.creativity)+'%';const custom=state.customCommand.trim().replace(/^\/+/,'').replace(/\s+/g,'_');const mods=[`/${custom||state.command}`,...state.modifiers.map(x=>`/${x}`),state.promptLang.toUpperCase()];$('resultTags').innerHTML=mods.map(x=>`<span>${escapeHtml(x)}</span>`).join('');renderProductPreview();renderFooterPreview();renderQuality()}
+function renderAll(){syncFields();renderLocale();renderCategories();renderCommands();renderTemplates();renderModifiers();renderSpecialized();applyAppearance();renderFiles();renderSaved();renderPrompt();$('commandsCount').textContent=digits(CATALOG.length)+'+'}
+function changeField(id,value){state[id]=value;persist();if(['uiDir','cardOrder','uiAlign','density','resultDir','resultAlign','promptLang'].includes(id))applyAppearance();if(['cardOrder'].includes(id))renderCommands();if(id==='customCommand')renderSpecialized();renderPrompt()}
+async function addFiles(incoming){const space=10-files.length;if(space<=0){setToast(tr('maxFiles'));return}if(incoming.length>space)setToast(tr('maxFiles'));for(const file of incoming.slice(0,space)){const ext=(file.name.split('.').pop()||'').toLowerCase();const textExtensions=['txt','md','csv','json','html','xml','log','yaml','yml','js','jsx','ts','tsx','css','py','sql','srt','vtt'];const item={name:file.name,size:file.size,ext:ext.slice(0,5).toUpperCase(),content:'',tooBig:false};if(textExtensions.includes(ext)&&file.size<=2*1024*1024){try{item.content=await file.text()}catch{}}else if(textExtensions.includes(ext))item.tooBig=true;files.push(item)}renderFiles();renderPrompt()}
+function downloadFile(filename,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.style.display='none';document.body.append(a);try{a.click()}finally{setTimeout(()=>a.remove(),2000);setTimeout(()=>URL.revokeObjectURL(url),60000)}}
+async function copyText(){try{await navigator.clipboard.writeText(latestPrompt);setToast(tr('copied'))}catch{const ta=document.createElement('textarea');ta.value=latestPrompt;ta.style.position='fixed';ta.style.opacity='0';document.body.append(ta);ta.select();let ok=false;try{ok=document.execCommand('copy')}catch{}ta.remove();setToast(ok?tr('copied'):tr('copyFailed'))}}
+function chooseTemplate(index){const t=TEMPLATES[index];if(!t)return;state.command=t.cmd;state.customCommand='';state.idea=state.locale==='ar'?t.ideaAr:t.ideaEn;state.format=t.format;state.quantity=t.quantity;state.modifiers=[...t.mods];state.category='all';state.search='';if(t.cmd==='Research')state.needSources=true;persist();renderAll();$('idea').focus()}
+function newRequest(){for(const id of ['idea','constraints','context','persona','avoid','successCriteria','customCommand'])state[id]='';state.specialized={};files=[];persist();renderAll();$('fileInput').value='';$('idea').scrollIntoView({behavior:'smooth',block:'center'});$('idea').focus({preventScroll:true});setToast(tr('cleared'))}
+function snapshot(){const out={...state};delete out.search;delete out.category;return out}
+function normalizeSnapshot(value){
+ const result={};if(!value||typeof value!=='object'||Array.isArray(value))return result;
+ for(const [key,defaultValue] of Object.entries(DEFAULT)){
+  if(!Object.prototype.hasOwnProperty.call(value,key))continue;
+  const item=value[key];
+  if(key==='specialized'){result.specialized=cleanSpecialized(item);continue}
+  if(key==='modifiers'){if(Array.isArray(item))result.modifiers=[...new Set(item.filter(m=>typeof m==='string'&&MODIFIERS.some(x=>x[0]===m)))].slice(0,40);continue}
+  if(typeof item!==typeof defaultValue||!['string','boolean'].includes(typeof item))continue;
+  if(typeof item==='boolean'){result[key]=item;continue}
+  if(OPTIONS[key]&&!OPTIONS[key].some(option=>option[0]===item))continue;
+  if(key==='locale'&&!['ar','en'].includes(item))continue;
+  if(key==='command'&&!CATALOG.some(c=>c[0]===item))continue;
+  if(key==='category'&&!CATEGORIES.some(c=>c[0]===item))continue;
+  if(key==='creativity'&&!['0','10','20','30','40','50','60','70','80','90','100'].includes(item))continue;
+  const limit={customCommand:50,artifactName:90,footerText:1200,search:150,persona:700}[key]||30000;
+  result[key]=item.slice(0,limit);
+ }
+ return result;
+}
+function restoreSnapshot(value){state={...freshDefaults(),...normalizeSnapshot(value),category:'all',search:''};files=[];persist();renderAll()}
+function savePreset(){const name=$('presetName').value.trim();if(!name){setToast(tr('saveFirst'));return}saved.unshift({name,config:snapshot()});saved=saved.slice(0,30);try{localStorage.setItem('wasit-presets-v1',JSON.stringify(saved))}catch{}$('saveDialog').close();$('presetName').value='';renderSaved();setToast(tr('presetSaved'))}
+function savePresets(){try{localStorage.setItem('wasit-presets-v1',JSON.stringify(saved))}catch{}}
+function exportLibraryData(){downloadFile('wasit-library-v2.json',JSON.stringify({schema:'wasit-library',version:2,exportedAt:new Date().toISOString(),presets:saved.map(p=>({name:p.name,config:normalizeSnapshot(p.config)})),characters:characters.map(p=>({...p}))},null,2),'application/json;charset=utf-8')}
+async function importLibraryFile(file){if(!file)return;if(file.size>2*1024*1024){setToast(tr('libraryTooLarge'));return}
+ let data;try{data=JSON.parse(await file.text())}catch{setToast(tr('libraryInvalid'));return}
+ let incomingPresets=[],incomingChars=[];
+ if(data&&data.schema==='wasit-library'&&data.version===2){incomingPresets=Array.isArray(data.presets)?data.presets:[];incomingChars=Array.isArray(data.characters)?data.characters:[]}
+ else if(data&&data.generator==='Wasit'&&data.settings)incomingPresets=[{name:file.name.replace(/\.json$/i,'').slice(0,60),config:data.settings}];
+ else{setToast(tr('libraryInvalid'));return}
+ let added=0;for(const raw of incomingPresets.slice(0,100)){if(saved.length>=30)break;if(!raw||typeof raw.name!=='string'||!raw.name.trim()||!raw.config||typeof raw.config!=='object')continue;const name=raw.name.trim().slice(0,60);if(saved.some(p=>p.name.toLocaleLowerCase()===name.toLocaleLowerCase()))continue;saved.push({name,config:normalizeSnapshot(raw.config)});added++}
+ for(const raw of incomingChars.slice(0,100)){if(characters.length>=60)break;const p=cleanCharacter(raw);if(!p||characters.some(x=>x.name.toLocaleLowerCase()===p.name.toLocaleLowerCase()))continue;p.id=String(Date.now())+'-'+Math.random().toString(36).slice(2,7);characters.push(p);added++}
+ saved=saved.slice(0,30);characters=characters.slice(0,60);savePresets();saveCharacters();renderSaved();if(taskGroup()==='comic')renderCharacters();setToast(added?`${tr('libraryImported')} (${digits(added)})`:tr('libraryEmpty'));
+}
+function attachEvents(){
+ for(const id of FIELD_IDS){const el=$(id);if(!el)continue;el.addEventListener(el.type==='checkbox'||el.tagName==='SELECT'?'change':'input',()=>changeField(id,el.type==='checkbox'?el.checked:el.value))}
+ $('searchCommands').addEventListener('input',e=>{state.search=e.target.value;renderCommands()});
+ $('categories').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;state.category=b.dataset.category;renderCategories();renderCommands()});
+ $('commandGrid').addEventListener('click',e=>{const b=e.target.closest('[data-command]');if(!b)return;state.command=b.dataset.command;persist();renderCommands();renderSpecialized();renderPrompt()});
+ $('modifierGrid').addEventListener('click',e=>{const b=e.target.closest('[data-modifier]');if(!b)return;const m=b.dataset.modifier;state.modifiers=state.modifiers.includes(m)?state.modifiers.filter(x=>x!==m):[...state.modifiers,m];persist();renderModifiers();renderPrompt()});
+ $('templates').addEventListener('click',e=>{const b=e.target.closest('[data-template]');if(b)chooseTemplate(+b.dataset.template)});
+ const specialChange=e=>{const field=e.target.closest('[data-special-key]');if(!field)return;const group=taskGroup();if(!state.specialized[group])state.specialized[group]={};state.specialized[group][field.dataset.specialKey]=field.value;persist();renderPrompt()};
+ $('specializedFields').addEventListener('input',e=>{if(e.target.tagName!=='SELECT')specialChange(e)});
+ $('specializedFields').addEventListener('change',e=>{if(e.target.tagName==='SELECT')specialChange(e)});
+ $('characterTools').addEventListener('click',e=>{const b=e.target.closest('[data-character-action]');if(b)characterAction(b.dataset.characterAction)});
+ $('qualityBox').addEventListener('click',e=>{const b=e.target.closest('[data-quality-fix]');if(b)applyQualityFix(b.dataset.qualityFix)});
+ $('insertExample').addEventListener('click',()=>{const known=TEMPLATES.find(t=>t.cmd===state.command);state.idea=known?(state.locale==='ar'?known.ideaAr:known.ideaEn):(state.locale==='ar'?`أنشئ ${activeCommand()[2]} عن أثر الذكاء الاصطناعي في التعلم، مع تطبيق عملي.`:`Create ${activeCommand()[3].toLowerCase()} on how AI can improve learning, with a practical example.`);persist();$('idea').value=state.idea;renderPrompt()});
+ $('themeToggle').addEventListener('click',()=>{state.dark=!state.dark;persist();syncFields();applyAppearance()});
+ $('languageToggle').addEventListener('click',()=>{state.locale=state.locale==='ar'?'en':'ar';state.uiDir=state.locale==='ar'?'rtl':'ltr';state.cardOrder=state.uiDir;if(!state.idea.trim())state.idea='';persist();renderAll()});
+ $('fileInput').addEventListener('change',async e=>{await addFiles([...e.target.files]);e.target.value='' });
+ const drop=$('dropZone');drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('dragover')});drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));drop.addEventListener('drop',async e=>{e.preventDefault();drop.classList.remove('dragover');await addFiles([...e.dataTransfer.files])});
+ $('fileList').addEventListener('click',e=>{const b=e.target.closest('[data-remove-file]');if(!b)return;files.splice(+b.dataset.removeFile,1);renderFiles();renderPrompt()});
+ $('copyPrompt').addEventListener('click',copyText);
+ for(const id of ['newRequest','newRequestTop','newRequestResult'])$(id).addEventListener('click',newRequest);
+ $('downloadPrompt').addEventListener('click',()=>downloadFile('wasit-prompt.txt',latestPrompt,'text/plain;charset=utf-8'));
+ $('exportJson').addEventListener('click',()=>downloadFile('wasit-settings.json',JSON.stringify({generator:'Wasit',version:1,settings:snapshot(),prompt:latestPrompt,references:files.map(f=>({name:f.name,size:f.size,textIncluded:!!(f.content&&state.includeFileText)}))},null,2),'application/json;charset=utf-8'));
+ $('exportLibrary').addEventListener('click',exportLibraryData);
+ $('importLibrary').addEventListener('click',()=>$('libraryFileInput').click());
+ $('libraryFileInput').addEventListener('change',async e=>{await importLibraryFile(e.target.files[0]);e.target.value=''});
+ $('resetAll').addEventListener('click',()=>{state={...DEFAULT,modifiers:[...DEFAULT.modifiers],specialized:{}};files=[];persist();renderAll()});
+ $('savePreset').addEventListener('click',()=>{if($('saveDialog').showModal)$('saveDialog').showModal();else{const name=prompt(state.locale==='ar'?'اسم القالب':'Template name');if(name){$('presetName').value=name;savePreset()}}});
+ $('confirmSave').addEventListener('click',e=>{e.preventDefault();savePreset()});$('saveForm').addEventListener('submit',e=>{e.preventDefault();savePreset()});
+ $('savedPresets').addEventListener('click',e=>{const load=e.target.closest('[data-load-preset]');const del=e.target.closest('[data-delete-preset]');if(load){const p=saved[+load.dataset.loadPreset];if(p){restoreSnapshot(p.config);setToast(tr('presetLoaded'))}}if(del){saved.splice(+del.dataset.deletePreset,1);try{localStorage.setItem('wasit-presets-v1',JSON.stringify(saved))}catch{}renderSaved();setToast(tr('removed'))}});
+}
+function start(){attachEvents();renderAll()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});
+else start();
+})();
+
+</script>
+</body>
+</html>
