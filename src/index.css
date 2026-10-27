@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Match the class toggled by the application's theme button. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --font-sans: 'Cairo', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

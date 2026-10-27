@@ -5,6 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Keep built assets relative so GitHub Pages can serve this project in a subdirectory.
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
