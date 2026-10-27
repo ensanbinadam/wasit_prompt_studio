@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وسيط | Wasit Prompt Studio</title>
+    <meta name="description" content="استوديو احترافي متكامل لهندسة وتوليد برومبتات الذكاء الاصطناعي وإنتاج منتجات رقمية نهائية مع توثيق مستقل وخيارات متقدمة." />
+    <meta property="og:title" content="وسيط | Wasit Prompt Studio" />
+    <meta property="og:description" content="استوديو احترافي متكامل لهندسة وتوليد برومبتات الذكاء الاصطناعي وإنتاج منتجات رقمية نهائية مع توثيق مستقل وخيارات متقدمة." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Google Fonts: Cairo (Arabic), Plus Jakarta Sans (English/Headings), JetBrains Mono (Code/Metrics) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-neutral-50/70 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased selection:bg-emerald-500/20 selection:text-emerald-700 dark:selection:text-emerald-300 min-h-screen flex flex-col transition-colors">
+    
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4 md:gap-8">
+        
+        <!-- Zone 1: Single element wordmark brand -->
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="w-9 h-9 rounded-xl bg-emerald-700 dark:bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-sm shadow-emerald-900/20">
+            و
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-lg tracking-tight text-neutral-900 dark:text-neutral-50 leading-none" data-i18n="appName">
+              وسيط
+            </span>
+            <span class="text-[10px] font-semibold text-emerald-700 dark:text-emerald-400 tracking-wider uppercase mt-0.5" data-i18n="appTagline">
+              استوديو البرومبتات الذكي
+            </span>
+          </div>
+        </div>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+          <button type="button" data-nav-target="task-section" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0" data-i18n="navCommands">الأوامر</button>
+          <button type="button" data-nav-target="idea-section" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0" data-i18n="navIdea">الفكرة والمراجع</button>
+          <button type="button" data-nav-target="smart-section" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0" data-i18n="navSmart">الإعدادات الذكية</button>
+          <button type="button" data-nav-target="product-section" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0" data-i18n="navProduct">المنتج الرقمي</button>
+          <button type="button" data-nav-target="footer-section" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0" data-i18n="navFooter">تذييل التوثيق</button>
+          <button type="button" data-nav-target="finetune-section" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0" data-i18n="navFineTune">الضبط المتقدم</button>
+        </nav>
+
+        <!-- Zone 3: Actions -->
+        <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          <button
+            id="btnOpenLibrary"
+            type="button"
+            class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-emerald-600 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors bg-neutral-50 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 whitespace-nowrap shrink-0"
+            title="المكتبة والقوالب"
+          >
+            <span>📁</span>
+            <span class="hidden sm:inline" data-i18n="btnLibrary">المكتبة</span>
+          </button>
+
+          <button
+            id="btnLiveTestTop"
+            type="button"
+            class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition-colors whitespace-nowrap shrink-0"
+            title="تجربة مباشرة مع Gemini 3.8 Flash"
+          >
+            <span>▶</span>
+            <span class="hidden sm:inline" data-i18n="btnLiveTest">تجربة الذكاء الاصطناعي</span>
+          </button>
+
+          <button
+            id="btnNewRequest"
+            type="button"
+            class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-emerald-700 dark:bg-emerald-600 rounded-lg hover:bg-emerald-800 dark:hover:bg-emerald-700 shadow-xs transition-colors whitespace-nowrap shrink-0"
+          >
+            <span>＋</span>
+            <span data-i18n="btnNewRequest">طلب جديد</span>
+          </button>
+
+          <div class="h-5 w-px bg-neutral-200 dark:bg-neutral-800 mx-1 hidden sm:block"></div>
+
+          <button
+            id="themeToggle"
+            type="button"
+            class="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-400 transition-colors text-sm"
+            title="تبديل المظهر"
+            aria-label="Toggle theme"
+          >
+            ☾
+          </button>
+
+          <button
+            id="langToggle"
+            type="button"
+            class="px-2.5 py-1.5 text-xs font-bold rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 transition-colors"
+            title="Switch Language"
+          >
+            EN
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-8 pb-6 border-b border-neutral-200 dark:border-neutral-800 bg-gradient-to-b from-emerald-50/50 via-white to-neutral-50/30 dark:from-neutral-900/40 dark:via-neutral-950 dark:to-neutral-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-2 text-xs font-semibold text-emerald-800 dark:text-emerald-400 mb-3">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-500 inline-block"></span>
+            <span data-i18n="heroEyebrow">من الفكرة البسيطة إلى برومبت تنفيذي متكامل</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-950 dark:text-neutral-50 text-balance leading-tight sm:leading-tight">
+            <span data-i18n="heroTitle1">فكرتك تستحق</span> <span class="text-emerald-700 dark:text-emerald-400" data-i18n="heroTitleHighlight">صياغة استثنائية</span> <span data-i18n="heroTitle2">تطلب منتجًا نهائيًا.</span>
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl" data-i18n="heroDesc">
+            اختر أمرًا، صف فكرتك، واضبط كل تفصيل. وسيط يحوّل اختصاراتك إلى برومبت هندسي يطلب إنشاء ملفات رقمية حقيقية قابلة للتنزيل مع تذييل توثيق اختياري مستقل للمعلمين والباحثين.
+          </p>
+
+          <!-- Unboxed Clean Metadata Strip (Anti-slop zero-pill discipline) -->
+          <div class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400 font-medium">
+            <span class="font-semibold text-emerald-700 dark:text-emerald-400">Wasit v2.4</span>
+            <span aria-hidden="true">·</span>
+            <span>136 أمر تخصصي</span>
+            <span aria-hidden="true">·</span>
+            <span>صيغ تصدير حقيقية</span>
+            <span aria-hidden="true">·</span>
+            <span>تذييل توثيق مستقل</span>
+            <span aria-hidden="true">·</span>
+            <span>تجربة حية مع Gemini 3.8</span>
+          </div>
+        </div>
+
+        <!-- Quick Templates Strip -->
+        <div class="mt-8 pt-6 border-t border-neutral-200/80 dark:border-neutral-800/80">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-neutral-800 dark:text-neutral-200 uppercase tracking-wider" data-i18n="quickTemplatesTitle">
+                قوالب سريعة جاهزة بنقرة واحدة
+              </span>
+              <span id="templatesCountBadge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                11 قالبًا نموذجيًا (معروضة بالكامل)
+              </span>
+            </div>
+            <span class="text-[11px] text-neutral-500 dark:text-neutral-400 hidden sm:inline" data-i18n="templatesTip">
+              انقر على أي قالب لتعبئة الأمر والفكرة والمعايير فوراً
+            </span>
+          </div>
+          <div id="templatesContainer" class="flex flex-wrap items-center gap-2"></div>
+        </div>
+
+        <!-- 4-Column KPI strip below hero -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-5 border-t border-neutral-200/80 dark:border-neutral-800/80">
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-emerald-700 dark:text-emerald-400 tabular-nums">136+</span>
+            <span class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mt-0.5" data-i18n="kpiCommands">أمر احترافي مصنف</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-neutral-900 dark:text-neutral-100 tabular-nums">14</span>
+            <span class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mt-0.5" data-i18n="kpiFormats">صيغة منتج رقمي نهائي</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-neutral-900 dark:text-neutral-100 tabular-nums">AR / EN</span>
+            <span class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mt-0.5" data-i18n="kpiLanguages">ثنائي اللغة واتجاهين كاملين</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-neutral-900 dark:text-neutral-100 tabular-nums">100%</span>
+            <span class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mt-0.5" data-i18n="kpiPrivacy">خصوصية ومعالجة محلية</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Main Workspace -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Form Editors -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          
+          <!-- Step 01: Task & Commands -->
+          <section id="task-section" class="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 sm:p-7 shadow-xs">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold text-sm shrink-0">
+                01
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-neutral-950 dark:text-neutral-50 tracking-tight" data-i18n="step1Title">
+                  ما الذي تريد إنجازه؟
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1" data-i18n="step1Sub">
+                  اختر أمرًا متخصصًا من مكتبة الـ 136 أمرًا، أو اكتب أمرًا مخصصًا لك.
+                </p>
+              </div>
+            </div>
+
+            <!-- Categories Bar -->
+            <div id="categoriesBar" class="flex items-center gap-1.5 overflow-x-auto pb-2 mb-4 scrollbar-none"></div>
+
+            <!-- Search Input -->
+            <div class="relative mb-4">
+              <input
+                id="searchCommandsInput"
+                type="search"
+                placeholder="ابحث عن أمر أو مهمة (مثال: قصة، كود، اختبار، SWOT، رسم...)"
+                class="w-full h-11 px-4 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-sm text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:outline-hidden focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 transition-all"
+              />
+            </div>
+
+            <!-- Commands Grid -->
+            <div id="commandsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 max-h-[360px] overflow-y-auto pe-1.5 scrollbar-thin"></div>
+
+            <!-- Active Command Banner -->
+            <div class="mt-4 p-3 bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/70 rounded-xl flex items-center justify-between gap-3 text-xs">
+              <div class="flex items-center gap-2 text-emerald-900 dark:text-emerald-300">
+                <span>✦</span>
+                <span>
+                  <span>الأمر النشط:</span>
+                  <strong id="activeCommandTag" class="font-mono font-bold mx-1" dir="ltr">/Comic</strong>
+                  <span>·</span>
+                  <span id="activeCommandDesc">مشاهد ولوحات مع حوار وبناء بصري</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Custom Command Input -->
+            <div class="mt-4 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
+              <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1.5" data-i18n="customCommandLabel">
+                أو أدخل أمرًا خاصًا بك (اختياري)
+              </label>
+              <div class="relative">
+                <input
+                  id="customCommandInput"
+                  type="text"
+                  placeholder="مثال: /MySpecialTask"
+                  maxlength="50"
+                  class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs font-mono text-neutral-900 dark:text-neutral-100 focus:outline-hidden focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 02: Idea, Constraints & Files -->
+          <section id="idea-section" class="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 sm:p-7 shadow-xs">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold text-sm shrink-0">
+                02
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-neutral-950 dark:text-neutral-50 tracking-tight" data-i18n="step2Title">
+                  أضف الفكرة والمراجع
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1" data-i18n="step2Sub">
+                  صف المهمة بلغتك الطبيعية، وأرفق ملفات داعمة إذا كانت متوفرة.
+                </p>
+              </div>
+            </div>
+
+            <!-- Idea Textarea -->
+            <div class="mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-bold text-neutral-800 dark:text-neutral-200" data-i18n="ideaLabel">
+                  فكرتك أو المهمة المطلوبة <span class="text-rose-600 dark:text-rose-400 ms-1">*</span>
+                </label>
+                <div class="flex items-center gap-2">
+                  <button
+                    id="btnEnhanceIdea"
+                    type="button"
+                    class="flex items-center gap-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 transition-colors"
+                    title="تحسين وتوسيع الفكرة بالذكاء الاصطناعي"
+                  >
+                    <span>✨</span>
+                    <span>توسيع ذكي</span>
+                  </button>
+                  <button
+                    id="btnInsertExample"
+                    type="button"
+                    class="flex items-center gap-1 text-[11px] font-semibold text-neutral-600 dark:text-neutral-400 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+                  >
+                    <span>✦</span>
+                    <span>مثال مناسب</span>
+                  </button>
+                </div>
+              </div>
+
+              <textarea
+                id="ideaInput"
+                rows="5"
+                placeholder="مثال: قصة مصورة من 6 لوحات عن طفل يعلّم روبوتًا اللغة العربية في فناء المدرسة، مع التركيز على المواقف الطريفة..."
+                class="w-full p-3.5 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-sm text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:outline-hidden focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 leading-relaxed resize-y"
+              ></textarea>
+
+              <div class="flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
+                <span id="ideaCharCount">0 حرف</span>
+                <button id="btnClearIdea" type="button" class="text-rose-600 dark:text-rose-400 hover:underline">
+                  مسح الفكرة
+                </button>
+              </div>
+            </div>
+
+            <!-- Constraints Textarea -->
+            <div class="mb-5">
+              <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1.5" data-i18n="constraintsLabel">
+                شروط وقيود إضافية (اختياري)
+              </label>
+              <textarea
+                id="constraintsInput"
+                rows="2"
+                placeholder="مثل: تجنب المصطلحات المعقدة، اجعل اللغة مناسبة لعمر 9 سنوات، استخدم أمثلة من البيئة المحلية..."
+                class="w-full p-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:outline-hidden focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 leading-relaxed resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Files Dropzone -->
+            <div id="dropzone" class="border-2 border-dashed rounded-xl p-5 text-center transition-all border-neutral-200 dark:border-neutral-800 bg-neutral-50/40 dark:bg-neutral-800/20 hover:border-emerald-600/50">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mx-auto mb-2 text-lg">
+                ☁
+              </div>
+              <strong class="block text-xs font-bold text-neutral-800 dark:text-neutral-200" data-i18n="dropTitle">
+                أسقط ملفاتك هنا أو تصفح من جهازك
+              </strong>
+              <p class="text-[11px] text-neutral-500 dark:text-neutral-400 max-w-md mx-auto mt-1 mb-3">
+                الملفات النصية تُقرأ محليًا وتُدمج في البرومبت؛ ملفات PDF والصور يُشار إليها بالاسم.
+              </p>
+              <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 text-xs font-semibold text-neutral-700 dark:text-neutral-200 hover:border-emerald-600 hover:text-emerald-700 cursor-pointer bg-white dark:bg-neutral-800 transition-colors">
+                <span>اختيار ملفات</span>
+                <input id="fileInput" type="file" multiple class="hidden" accept=".txt,.md,.csv,.json,.html,.xml,.log,.yaml,.yml,.js,.jsx,.ts,.tsx,.css,.py,.sql,.srt,.vtt,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.webp,.svg" />
+              </label>
+            </div>
+
+            <!-- Uploaded Files List -->
+            <div id="filesList" class="mt-4 space-y-2"></div>
+
+            <div class="mt-3">
+              <label class="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300 cursor-pointer">
+                <input id="includeFileTextCheckbox" type="checkbox" checked class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>أدرج محتوى الملفات النصية فعليًا داخل نص البرومبت</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- Step ✦: Smart Task-Aware Fields -->
+          <section id="smart-section" class="bg-white dark:bg-neutral-900 rounded-2xl border border-emerald-200/80 dark:border-emerald-900/40 p-6 sm:p-7 shadow-xs">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-xs shadow-emerald-900/20">
+                ✦
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-neutral-950 dark:text-neutral-50 tracking-tight">
+                  إعدادات ذكية بحسب نوع المهمة
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  المجال الحالي: <span id="smartDomainLabel" class="font-bold text-emerald-700 dark:text-emerald-400">القصص المصورة والمانغا</span>. تتبدل الحقول تلقائيًا لتقديم أعلى درجات التخصيص.
+                </p>
+              </div>
+            </div>
+
+            <!-- Comic Character Library Component -->
+            <div id="comicCharacterTool" class="p-4 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 mb-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-bold text-emerald-900 dark:text-emerald-200 flex items-center gap-1.5">
+                  <span>👤</span>
+                  <span>مكتبة الشخصيات الثابتة</span>
+                </span>
+                <button id="btnFillSalem" type="button" class="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-emerald-700 text-white hover:bg-emerald-800 transition-colors shadow-xs">
+                  ✦ تعبئة مثال سالم
+                </button>
+              </div>
+              <div class="flex items-center gap-2 mb-2">
+                <select id="characterSelect" class="flex-1 h-9 px-3 bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-lg text-xs text-neutral-800 dark:text-neutral-200"></select>
+              </div>
+              <p class="text-[11px] text-emerald-800/80 dark:text-emerald-400/80">
+                ثبات ملامح البطل وأزيائه بين جميع اللوحات هو السر في نجاح القصص المصورة والمانغا.
+              </p>
+            </div>
+
+            <!-- Dynamic Fields Container -->
+            <div id="smartFieldsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5"></div>
+          </section>
+
+          <!-- Step ▣: Digital Product Deliverable -->
+          <section id="product-section" class="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 sm:p-7 shadow-xs">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold text-sm shrink-0">
+                ▣
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-neutral-950 dark:text-neutral-50 tracking-tight">
+                  المنتج الرقمي النهائي
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  لكل أمر ناتج تنفيذي مناسب؛ يتضمن البرومبت طلب إنشاء ملف حقيقي قابل للتنزيل والاستخدام المباشر.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1.5">
+                  صيغة المنتج المطلوبة
+                </label>
+                <select id="artifactFormat" class="w-full h-11 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs font-medium text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1.5">
+                  اسم الملف المقترح (اختياري)
+                </label>
+                <input id="artifactName" type="text" placeholder="مثال: قصص-سالم-التعليمية" maxlength="90" class="w-full h-11 px-3.5 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400" />
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300 cursor-pointer">
+                <input id="includeEditableCheckbox" type="checkbox" checked class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>اطلب نسخة قابلة للتعديل أو ملف المصدر المفتوح متى أمكن ذلك</span>
+              </label>
+            </div>
+
+            <div class="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-800 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center shrink-0 mt-0.5 text-sm">
+                📦
+              </div>
+              <div>
+                <span class="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider block">
+                  المنتج المقترح لهذا الأمر
+                </span>
+                <strong id="productPreviewTitle" class="block text-sm font-bold text-neutral-900 dark:text-neutral-100 mt-0.5">
+                  لوحات قصة مصورة فعلية — PNG + PDF
+                </strong>
+                <p id="productPreviewGuide" class="text-xs text-neutral-500 dark:text-neutral-400 mt-1 leading-relaxed">
+                  أنشئ الرسوم الفعلية للوحات، والحوار العربي المقروء، واجمعها في صفحة أو صفحات PDF.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step ✎: Documentation Footer -->
+          <section id="footer-section" class="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 sm:p-7 shadow-xs">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold text-sm shrink-0">
+                ✎
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-neutral-950 dark:text-neutral-50 tracking-tight">
+                  تذييل التوثيق الخارجي المستقل
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  توقيع أو بيانات المعلم والمدرسة في هامش سفلي منفصل تمامًا خارج العمل الفني أو النص الأساسي.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 mb-4">
+              <label class="flex items-center gap-2.5 text-xs font-bold text-emerald-950 dark:text-emerald-200 cursor-pointer">
+                <input id="footerEnabledCheckbox" type="checkbox" class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>إضافة تذييل توثيق اختياري مستقل أسفل المنتج النهائي</span>
+              </label>
+            </div>
+
+            <div id="footerFieldsArea" class="space-y-4 pt-2 hidden">
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1.5">
+                  نص التذييل — يُكتب كما هو حرفيًا
+                </label>
+                <textarea
+                  id="footerTextInput"
+                  rows="3"
+                  maxlength="1200"
+                  placeholder="إعداد: أ. فهد الشمري | مدرسة الأندلس الابتدائية | مادة الرياضيات | العام الدراسي 1448هـ"
+                  class="w-full p-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:outline-hidden focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 leading-relaxed resize-y"
+                ></textarea>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">محاذاة النص</label>
+                  <select id="footerAlign" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">التكرار بالصفحات</label>
+                  <select id="footerScope" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">حجم الخط</label>
+                  <select id="footerSize" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                </div>
+              </div>
+
+              <div>
+                <label class="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300 cursor-pointer">
+                  <input id="footerSeparatorCheckbox" type="checkbox" class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                  <span>إظهار خط فاصل رفيع هادئ أعلى التذييل</span>
+                </label>
+              </div>
+
+              <!-- Live Simulation Band -->
+              <div class="mt-4 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/40">
+                <div class="h-16 rounded-lg border border-dashed border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-xs text-neutral-400 font-medium">
+                  مساحة العمل الأصلية — دون أي تشويه أو تداخل
+                </div>
+                <div id="footerMockBand" class="mt-3 pt-2 text-neutral-700 dark:text-neutral-300 text-center text-[11px]"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 03: Response Style & Advanced Engine -->
+          <section id="finetune-section" class="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 sm:p-7 shadow-xs">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold text-sm shrink-0">
+                03
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-neutral-950 dark:text-neutral-50 tracking-tight" data-i18n="step3Title">
+                  اضبط أسلوب الاستجابة والمحرك
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1" data-i18n="step3Sub">
+                  تحكم في ما سيظهر في النتيجة بدقة هندسية عالية لضمان التوافق مع هدفك.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mb-5">
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">لغة البرومبت والنتيجة</label>
+                <select id="promptLang" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">الجمهور المستهدف</label>
+                <select id="audience" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">النبرة والأسلوب</label>
+                <select id="tone" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">مستوى التفصيل</label>
+                <select id="depth" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">هيكل المخرجات</label>
+                <select id="format" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">عدد العناصر أو اللوحات</label>
+                <select id="quantity" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">شكل الأرقام</label>
+                <select id="numerals" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">اتجاه النص</label>
+                <select id="resultDir" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">محاذاة النص</label>
+                <select id="resultAlign" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+              </div>
+            </div>
+
+            <!-- 4 Toggles -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-800 mb-5">
+              <label class="flex items-center gap-2.5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 cursor-pointer">
+                <input id="needExamples" type="checkbox" checked class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>أضف أمثلة عملية واقعية</span>
+              </label>
+              <label class="flex items-center gap-2.5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 cursor-pointer">
+                <input id="needQuestions" type="checkbox" checked class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>اطرح أسئلة توضيحية ذكية إذا نقصت معلومات</span>
+              </label>
+              <label class="flex items-center gap-2.5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 cursor-pointer">
+                <input id="needSources" type="checkbox" class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>اطلب توثيقًا بالمصادر للحقائق والأرقام</span>
+              </label>
+              <label class="flex items-center gap-2.5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 cursor-pointer">
+                <input id="needChecklist" type="checkbox" class="w-4 h-4 text-emerald-700 rounded border-neutral-300 focus:ring-emerald-600" />
+                <span>أضف قائمة تحقق ختامية للإنجاز</span>
+              </label>
+            </div>
+
+            <!-- Advanced Prompt Engine Collapsible Box -->
+            <div class="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden mb-5">
+              <button
+                id="btnToggleAdvanced"
+                type="button"
+                class="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-800/70 hover:bg-neutral-100 dark:hover:bg-neutral-800 flex items-center justify-between text-xs font-bold text-neutral-800 dark:text-neutral-200 transition-colors"
+              >
+                <span class="flex items-center gap-2">
+                  <span>⚙</span>
+                  <span>المحرك المتقدم للبرومبت (الدور، المنصة، القيود، الإبداع)</span>
+                </span>
+                <span id="advancedToggleIcon" class="text-xs text-emerald-700">▼</span>
+              </button>
+
+              <div id="advancedOptionsArea" class="p-4 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 space-y-4 hidden">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">المنصة المقصودة</label>
+                    <select id="platform" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">بنية البرومبت</label>
+                    <select id="promptMode" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">سياسة المصادر</label>
+                    <select id="sourcePolicy" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">حد طول الاستجابة</label>
+                    <select id="maxWords" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">الدور أو الخبرة المطلوبة من المساعد الذكي</label>
+                  <input id="personaInput" type="text" placeholder="مثال: خبير مناهج تعليمية تفاعلية بخبرة 15 عامًا" class="w-full h-10 px-3 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">سياق إضافي أو معلومات خلفية</label>
+                    <textarea id="contextInput" rows="2" placeholder="من المستفيد؟ ما هي المشكلة الحالية؟" class="w-full p-2.5 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></textarea>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">ما الذي يجب تجنبه صراحة؟</label>
+                    <textarea id="avoidInput" rows="2" placeholder="تجنب الحشو، تجنب الكلمات الغامضة..." class="w-full p-2.5 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></textarea>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1">معايير نجاح النتيجة (معايير القبول)</label>
+                  <textarea id="successCriteriaInput" rows="2" placeholder="يعمل الكود مباشرة، يحتوي على مثال واضح..." class="w-full p-2.5 bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 rounded-xl text-xs text-neutral-900 dark:text-neutral-100"></textarea>
+                </div>
+
+                <!-- Creativity Slider -->
+                <div class="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200 dark:border-neutral-800">
+                  <div class="flex items-center justify-between text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-2">
+                    <span>درجة الإبداع والابتكار (Creativity Index)</span>
+                    <span id="creativityDisplay" class="font-mono text-emerald-700 dark:text-emerald-400 font-bold">50%</span>
+                  </div>
+                  <input id="creativityRange" type="range" min="0" max="100" step="10" value="50" class="w-full accent-emerald-700 dark:accent-emerald-500 cursor-pointer" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Modifiers Grid -->
+            <div>
+              <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-2">
+                أوامر وموجهات أسلوبية مساعدة (انقر للتفعيل/الإلغاء)
+              </label>
+              <div id="modifiersGrid" class="flex flex-wrap gap-1.5"></div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Right Column: Live Prompt Preview & Execution Dock -->
+        <div class="lg:col-span-5">
+          <aside id="prompt-dock" class="sticky top-20 flex flex-col gap-4">
+            
+            <div class="bg-white dark:bg-neutral-900 rounded-2xl border border-emerald-300/80 dark:border-emerald-800/60 p-5 sm:p-6 shadow-md shadow-emerald-950/5">
+              
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div>
+                  <div class="flex items-center gap-2 text-[11px] font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span>معاينة مباشرة للبرومبت</span>
+                  </div>
+                  <h2 class="text-xl font-extrabold text-neutral-950 dark:text-neutral-50 tracking-tight mt-0.5" data-i18n="livePreviewTitle">
+                    البرومبت التنفيذي النهائي
+                  </h2>
+                </div>
+
+                <button
+                  id="btnLiveTestDock"
+                  type="button"
+                  class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-700 dark:bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-800 transition-colors shadow-xs"
+                >
+                  <span>▶</span>
+                  <span>تشغيل واختبار</span>
+                </button>
+              </div>
+
+              <!-- Quality Review Box -->
+              <div class="mb-3.5 p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/50">
+                <div class="flex items-center justify-between text-xs font-bold mb-1.5">
+                  <span class="flex items-center gap-1.5 text-neutral-800 dark:text-neutral-200">
+                    <span>✦</span>
+                    <span>تدقيق جودة البرومبت</span>
+                  </span>
+                  <span id="qualitySummary" class="text-[11px] font-bold text-emerald-700 dark:text-emerald-400">
+                    ✓ ممتاز ومتناسق
+                  </span>
+                </div>
+                <div id="qualityIssuesList" class="space-y-1.5 mt-2"></div>
+              </div>
+
+              <!-- Formatted Prompt Paper -->
+              <div class="relative rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/70 p-4 max-h-[460px] overflow-y-auto scrollbar-thin">
+                <pre id="promptOutput" class="font-mono text-xs leading-relaxed text-neutral-800 dark:text-neutral-200 whitespace-pre-wrap break-words"></pre>
+              </div>
+
+              <!-- Metrics Strip -->
+              <div class="flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-3 px-1 tabular-nums">
+                <span id="wordCount">0 كلمة</span>
+                <span id="charCount">0 حرف</span>
+                <span id="tokenCount">~0 رمز تقديري</span>
+              </div>
+
+              <!-- Primary Action Buttons -->
+              <div class="grid grid-cols-2 gap-2 mt-4">
+                <button
+                  id="btnCopyPrompt"
+                  type="button"
+                  class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-bold bg-emerald-800 dark:bg-emerald-700 hover:bg-emerald-900 dark:hover:bg-emerald-600 text-white transition-all shadow-xs"
+                >
+                  <span>📋</span>
+                  <span data-i18n="btnCopyPrompt">نسخ البرومبت</span>
+                </button>
+
+                <button
+                  id="btnDownloadTxt"
+                  type="button"
+                  class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-bold border border-neutral-200 dark:border-neutral-800 hover:border-emerald-600 text-neutral-800 dark:text-neutral-200 bg-white dark:bg-neutral-800 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors shadow-xs"
+                >
+                  <span>↓</span>
+                  <span data-i18n="btnDownloadTxt">تنزيل TXT</span>
+                </button>
+              </div>
+
+              <!-- 1-Click Launch with Any AI Engine -->
+              <div class="mt-3 pt-3 border-t border-neutral-200 dark:border-neutral-800">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[11px] font-bold text-neutral-800 dark:text-neutral-200 flex items-center gap-1.5">
+                    <span>🚀</span>
+                    <span>فتح وتطبيق فوري مع محركك المفضل</span>
+                  </span>
+                  <span class="text-[10px] text-emerald-700 dark:text-emerald-400 font-medium">ينسخ البرومبت ويفتح المنصة</span>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-1.5" id="aiLaunchersBar">
+                  <a
+                    href="https://chatgpt.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ai-platform="chatgpt"
+                    data-platform-name="ChatGPT"
+                    class="ai-launch-btn flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-bold bg-neutral-100 hover:bg-emerald-50 dark:bg-neutral-800 dark:hover:bg-emerald-950/60 text-neutral-800 dark:text-neutral-200 hover:text-emerald-700 dark:hover:text-emerald-300 border border-neutral-200 dark:border-neutral-700 hover:border-emerald-500 transition-all cursor-pointer text-center"
+                    title="فتح في ChatGPT مع نسخ البرومبت تلقائياً"
+                  >
+                    <span>🟢</span>
+                    <span>ChatGPT</span>
+                  </a>
+
+                  <a
+                    href="https://claude.ai/new"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ai-platform="claude"
+                    data-platform-name="Claude"
+                    class="ai-launch-btn flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-bold bg-neutral-100 hover:bg-amber-50 dark:bg-neutral-800 dark:hover:bg-amber-950/60 text-neutral-800 dark:text-neutral-200 hover:text-amber-700 dark:hover:text-amber-300 border border-neutral-200 dark:border-neutral-700 hover:border-amber-500 transition-all cursor-pointer text-center"
+                    title="فتح في Claude مع نسخ البرومبت تلقائياً"
+                  >
+                    <span>🟣</span>
+                    <span>Claude</span>
+                  </a>
+
+                  <a
+                    href="https://chat.deepseek.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ai-platform="deepseek"
+                    data-platform-name="DeepSeek"
+                    class="ai-launch-btn flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-bold bg-neutral-100 hover:bg-blue-50 dark:bg-neutral-800 dark:hover:bg-blue-950/60 text-neutral-800 dark:text-neutral-200 hover:text-blue-700 dark:hover:text-blue-300 border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 transition-all cursor-pointer text-center"
+                    title="فتح في DeepSeek مع نسخ البرومبت تلقائياً"
+                  >
+                    <span>🐋</span>
+                    <span>DeepSeek</span>
+                  </a>
+
+                  <a
+                    href="https://gemini.google.com/app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ai-platform="gemini"
+                    data-platform-name="Gemini"
+                    class="ai-launch-btn flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-bold bg-neutral-100 hover:bg-blue-50 dark:bg-neutral-800 dark:hover:bg-blue-950/60 text-neutral-800 dark:text-neutral-200 hover:text-blue-700 dark:hover:text-blue-300 border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 transition-all cursor-pointer text-center"
+                    title="فتح في Google Gemini مع نسخ البرومبت تلقائياً"
+                  >
+                    <span>🔵</span>
+                    <span>Gemini</span>
+                  </a>
+
+                  <a
+                    href="https://copilot.microsoft.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ai-platform="copilot"
+                    data-platform-name="Copilot"
+                    class="ai-launch-btn flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-bold bg-neutral-100 hover:bg-cyan-50 dark:bg-neutral-800 dark:hover:bg-cyan-950/60 text-neutral-800 dark:text-neutral-200 hover:text-cyan-700 dark:hover:text-cyan-300 border border-neutral-200 dark:border-neutral-700 hover:border-cyan-500 transition-all cursor-pointer text-center"
+                    title="فتح في Microsoft Copilot مع نسخ البرومبت تلقائياً"
+                  >
+                    <span>🔷</span>
+                    <span>Copilot</span>
+                  </a>
+
+                  <a
+                    href="https://www.perplexity.ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ai-platform="perplexity"
+                    data-platform-name="Perplexity"
+                    class="ai-launch-btn flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-bold bg-neutral-100 hover:bg-teal-50 dark:bg-neutral-800 dark:hover:bg-teal-950/60 text-neutral-800 dark:text-neutral-200 hover:text-teal-700 dark:hover:text-teal-300 border border-neutral-200 dark:border-neutral-700 hover:border-teal-500 transition-all cursor-pointer text-center"
+                    title="فتح في Perplexity AI مع نسخ البرومبت تلقائياً"
+                  >
+                    <span>🌐</span>
+                    <span>Perplexity</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Secondary Action Row -->
+              <div class="grid grid-cols-2 gap-2 mt-2">
+                <button
+                  id="btnExportJson"
+                  type="button"
+                  class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-[11px] font-semibold border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
+                >
+                  <span>⇩</span>
+                  <span data-i18n="btnExportJson">تصدير JSON</span>
+                </button>
+
+                <button
+                  id="btnSavePresetDock"
+                  type="button"
+                  class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-[11px] font-semibold border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-emerald-700 dark:hover:text-emerald-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
+                >
+                  <span>💾</span>
+                  <span data-i18n="btnSavePreset">حفظ كقالب</span>
+                </button>
+              </div>
+
+              <!-- Offline Single-File HTML Download -->
+              <div class="mt-2 space-y-2">
+                <button
+                  id="btnDownloadStandalone"
+                  type="button"
+                  class="w-full py-2.5 px-3 rounded-xl text-xs font-bold border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+                >
+                  <span>📥</span>
+                  <span data-i18n="btnDownloadStandalone">تنزيل صفحة أوفلاين مستقلة (HTML)</span>
+                </button>
+
+                <button
+                  id="btnResetAll"
+                  type="button"
+                  class="w-full py-1.5 text-[11px] text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors flex items-center justify-center gap-1"
+                >
+                  <span>↺</span>
+                  <span>إعادة ضبط جميع الإعدادات للوضع الافتراضي</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Engineering Tip -->
+            <div class="p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/30 border border-emerald-200/70 dark:border-emerald-800/50 text-xs text-emerald-900 dark:text-emerald-300 leading-relaxed">
+              <strong class="block font-bold mb-1">✦ نصيحة هندسية للبرومبت:</strong>
+              <p>
+                البرومبت الاحترافي لا يختصر الكلمات فقط، بل يوضح معايير التسليم، ويثبّت هوية الشخصية أو محاور الدرس، ويطلب ملفًا نهائيًا واضح المعالم.
+              </p>
+            </div>
+
+          </aside>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 py-6 mt-12 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500 dark:text-neutral-400">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-neutral-800 dark:text-neutral-200">وسيط</span>
+          <span>—</span>
+          <span>استوديو برومبتات ذكي يطلب منتجات رقمية نهائية موثقة</span>
+        </div>
+        <div>
+          <span>Wasit Studio © 2026 · جميع الحقوق محفوظة</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Presets Modal -->
+    <div id="presetsModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/70 backdrop-blur-xs hidden">
+      <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
+          <div>
+            <h3 class="font-extrabold text-base text-neutral-900 dark:text-neutral-50">مكتبة القوالب المحفوظة</h3>
+            <span class="text-xs text-neutral-500 dark:text-neutral-400">قوالب مخزنة محليًا في متصفحك</span>
+          </div>
+          <button id="btnClosePresets" type="button" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 text-lg">✕</button>
+        </div>
+
+        <div class="p-6 overflow-y-auto flex-1 space-y-6 scrollbar-thin">
+          <form id="formSavePreset" class="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-800">
+            <label class="block text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-2">حفظ إعداداتك الحالية كقالب جديد</label>
+            <div class="flex gap-2">
+              <input id="newPresetNameInput" type="text" placeholder="مثال: قصص سالم للعلوم، دروس الرياضيات..." maxlength="60" class="flex-1 h-10 px-3.5 bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl text-xs text-neutral-900 dark:text-neutral-100" />
+              <button type="submit" class="px-4 py-2 bg-emerald-700 text-white rounded-xl text-xs font-bold hover:bg-emerald-800 transition-colors shrink-0">حفظ القالب</button>
+            </div>
+          </form>
+
+          <div>
+            <h4 class="text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-3">القوالب المتاحة للاستدعاء</h4>
+            <div id="presetsList" class="space-y-2"></div>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center justify-between gap-3">
+            <span class="text-xs text-neutral-500">النسخ الاحتياطي والمشاركة:</span>
+            <div class="flex items-center gap-2">
+              <button id="btnExportLibrary" type="button" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 text-xs font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+                <span>⇩</span>
+                <span>تصدير المكتبة كاملة JSON</span>
+              </button>
+              <label class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 text-xs font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800 cursor-pointer">
+                <span>⇧</span>
+                <span>استيراد ملف مكتبة</span>
+                <input id="libraryFileInput" type="file" accept=".json,application/json" class="hidden" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live AI Execution Modal -->
+    <div id="liveTestModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/70 backdrop-blur-xs hidden">
+      <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center text-sm">✦</div>
+            <div>
+              <h3 class="font-extrabold text-base text-neutral-900 dark:text-neutral-50">تجربة البرومبت وتشغيله مع الذكاء الاصطناعي</h3>
+              <span id="aiExecutionStats" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono">Gemini المدمج + فتح سريع لكافة المحركات</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="btnRerunTest" type="button" class="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 text-neutral-600 dark:text-neutral-400" title="إعادة تشغيل Gemini">🔄</button>
+            <button id="btnCloseLiveTest" type="button" class="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 text-neutral-600 dark:text-neutral-400">✕</button>
+          </div>
+        </div>
+
+        <!-- Multi-Platform Direct Launcher Strip inside Modal -->
+        <div class="px-6 py-2.5 bg-neutral-50 dark:bg-neutral-800/60 border-b border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div class="flex items-center gap-1.5 text-neutral-600 dark:text-neutral-300 font-semibold">
+            <span>🌐</span>
+            <span>لديك اشتراك في محرك آخر؟ افتح البرومبت فيه بنقرة واحدة:</span>
+          </div>
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" data-ai-platform="chatgpt" data-platform-name="ChatGPT" class="ai-launch-btn px-2.5 py-1 rounded-md text-[11px] font-bold bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 hover:border-emerald-500 hover:text-emerald-700 dark:hover:text-emerald-300">🟢 ChatGPT</a>
+            <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" data-ai-platform="claude" data-platform-name="Claude" class="ai-launch-btn px-2.5 py-1 rounded-md text-[11px] font-bold bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 hover:border-amber-500 hover:text-amber-700 dark:hover:text-amber-300">🟣 Claude</a>
+            <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" data-ai-platform="deepseek" data-platform-name="DeepSeek" class="ai-launch-btn px-2.5 py-1 rounded-md text-[11px] font-bold bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-700 dark:hover:text-blue-300">🐋 DeepSeek</a>
+            <a href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer" data-ai-platform="copilot" data-platform-name="Copilot" class="ai-launch-btn px-2.5 py-1 rounded-md text-[11px] font-bold bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-300">🔷 Copilot</a>
+            <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" data-ai-platform="perplexity" data-platform-name="Perplexity" class="ai-launch-btn px-2.5 py-1 rounded-md text-[11px] font-bold bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 hover:border-teal-500 hover:text-teal-700 dark:hover:text-teal-300">🌐 Perplexity</a>
+          </div>
+        </div>
+
+        <div class="p-6 overflow-y-auto flex-1 scrollbar-thin">
+          <div id="aiLoadingState" class="py-20 flex flex-col items-center justify-center text-center hidden">
+            <div class="w-8 h-8 border-3 border-emerald-600 border-t-transparent rounded-full animate-spin mb-3"></div>
+            <p class="text-sm font-bold text-neutral-800 dark:text-neutral-200">جاري إرسال البرومبت وتوليد الناتج من Gemini 3.8 Flash...</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">يتم تقييم الشروط وضوابط التوثيق وجودة المنتج المطلوب.</p>
+          </div>
+
+          <div id="aiErrorState" class="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-300 text-xs hidden"></div>
+
+          <div id="aiResponseWrapper" class="hidden">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400">إجابة النموذج المباشرة:</span>
+              <button id="btnCopyAiResponse" type="button" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 text-xs font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+                <span>📋</span>
+                <span>نسخ الإجابة</span>
+              </button>
+            </div>
+            <div id="aiResponseArea" class="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/70 text-xs text-neutral-800 dark:text-neutral-200 leading-relaxed font-sans whitespace-pre-wrap break-words"></div>
+          </div>
+        </div>
+
+        <div class="px-6 py-3.5 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/40 flex items-center justify-between text-xs text-neutral-500">
+          <span>الخادم: بيئة محلية آمنة</span>
+          <button id="btnDismissLiveTest" type="button" class="px-4 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800">إغلاق</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 start-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-xs font-bold shadow-xl border border-neutral-700 dark:border-neutral-300 transition-all duration-200 hidden opacity-0 translate-y-4"></div>
+
+    <!-- Main Module Script -->
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

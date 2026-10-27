@@ -1,0 +1,6 @@
+{
+  "name": "وسيط | Wasit Prompt Studio",
+  "description": "استوديو احترافي متكامل لهندسة وتوليد برومبتات الذكاء الاصطناعي وإنتاج منتجات رقمية نهائية مع توثيق مستقل وخيارات متقدمة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
